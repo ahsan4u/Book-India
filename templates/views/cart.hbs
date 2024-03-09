@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+    <style> a[href = "/about"] { color: blue; }</style>
+    <link rel="stylesheet" href="/stylesheets/cart.css">
+</head>
+<body>
+    {{>top}}
+
+    <div class="items-container">
+        
+        {{#if books}}{{#each books}}
+        <div class="each-cart">
+            <div><img id="cart-book-img" src="/books/{{image}}" alt=""></div>
+            <div class="about-cart">
+                <p>{{name}}</p>
+                <p>{{auther}}</p>
+                <p>{{price}}</p>
+            </div>
+        </div>
+        {{/each}}{{else}}
+            <h1 style="text-align: center; margin-top: 200px; color: red;">No Items Added in Your Cart List</h1>
+        {{/if}}
+
+    </div>
+
+    {{>navbarScrollEffect}}
+</body>
+</html>

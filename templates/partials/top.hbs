@@ -1,0 +1,56 @@
+<div class="header">
+    <a href="/">
+    <div class="logoAndName">
+        <img src="/img-controller/icons/site-logo.png" alt="logo" class="logo-img"> <span id="site-name"><b>Book India</b></span>
+    </div></a>
+    <div  class="other-logo">
+
+        <div class="cart-container">
+            {{#if user._id}}<a href="/my-cart"><img src="/img-controller/icons/kart.png" alt="kart" style="width: 30px;"></a>
+            {{else}}<a href="/sign-in-up"><img src="/img-controller/icons/kart.png" alt="kart" style="width: 30px;"></a>{{/if}}
+            {{#if cartCounts}}<sup id="kart-count">{{cartCounts}}</sup>{{/if}}
+        </div>
+
+        <div class="like-container">
+            {{#if user._id}}<a href="/likes"><img src="/img-controller/icons/heart.png" alt="heart" style="width: 30px;"></a>
+            {{else}}<a href="/sign-in-up"><img src="/img-controller/icons/heart.png" alt="heart" style="width: 30px;"></a>{{/if}}
+            {{#if likeCounts}}<sup>{{likeCounts}}</sup>{{/if}}
+        </div>
+
+        {{#if user}}
+        <a href="/my-account">
+        <div class="user-tag">
+            <div id="home-profile-name">{{user.firstname}} {{user.lastname}}</div>
+            <img class="user-img" src="/Users/{{user.image}}">
+        </div></a>
+        {{else}}
+        <a href="/sign-in-up">
+        <div class="user-tag">
+            <div id="home-profile-name">Sign in</div>
+            <div class="default-user-img"></div>
+        </div></a>
+        {{/if}}
+
+    </div>
+</div>
+
+<div class="navbar">
+    <div class="search-container">
+        <form action="/find-book" method="get" style="display: inline;">
+            <input type="text" name="name" placeholder="Search" id="search">
+            <button id="search-btn" type="submit">
+                <img src="/img-controller/icons/lens.png" alt="search" style="width: 15px; margin-top: 5px;">
+            </button>    
+        </form>
+    </div>
+
+    <ul class="nav-pages-list">
+        <li><a href="/" class="nav-page">Home</a></li>
+        <li><a href="/text-books" class="nav-page">Text Books</a></li>
+        <li><a href="/e-books" class="nav-page">E-Books</a></li>
+        {{!-- <li><a href="/audiobooks" class="nav-page">Audio Books</a></li> --}}
+        <li><a href="/feathured" class="nav-page">Featured</a></li>
+        <li><a href="/about" class="nav-page">About</a></li>
+        {{#if user.admin}}<li><a href="/add-book" class="nav-page">Add Books</a></li>{{/if}}
+    </ul>
+</div>

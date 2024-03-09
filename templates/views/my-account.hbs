@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+    
+    <link rel="stylesheet" href="/stylesheets/my-account.css">
+</head>
+<body>
+    {{>top}}
+    
+    {{#if user}}
+    <div class="wrapper">
+    <div class="left">
+        <img src="/Users/{{user.image}}" alt="user">
+        <h2>{{user.firstname}} <span>{{user.lastname}}</span></h2>
+        {{#if user.admin}} <p>You're Admin</p>{{/if}}
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+                 <div class="data">
+                    <h4>Email</h4>
+                    <p>{{user.email}}</p>
+                 </div>
+                 <div class="data">
+                   <h4>Phone</h4>
+                    <p>{{user.mobile}}</p>
+              </div>
+            </div>
+        </div>
+      
+      <div class="projects">
+            <h3>More Details...</h3>
+            <div class="projects_data">
+                 <div class="data">
+                    <h4>My Order</h4>
+                    <p>Check your order list</p>
+                 </div>
+                 <div class="data">
+                   <h4>My wishlist</h4>
+                    <p>Check your wishlist</p>
+              </div>
+            </div>
+        </div>
+      
+        <div class="social_media">
+            <ul>
+              <li><a href="/"></a></li>
+              <li><a href="/"></a></li>
+              <li><a href="/"></a></li>
+          </ul>
+      </div>
+      <h3 style="margin-top: 100px;"><a href="/logout">Logout</a></h3>
+    </div>
+</div>
+    {{else}}
+    <h1>You are not Logged in</h1>
+    {{/if}}
+</body>
+</html>

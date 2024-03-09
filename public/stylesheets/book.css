@@ -1,0 +1,82 @@
+#categorie-heading {
+  padding: 5px;
+  padding-left: 10px;
+  width: 80vw;
+  font-family: 'Convergence', sans-serif;
+  margin: auto;
+  color: white;
+  background-color: rgb(103, 31, 127);
+  border-radius: 7px 7px 0 0;
+}
+
+.see-more-btn {
+  float: right;
+  font-style: italic;
+  margin: 5px 45px 0 0;
+  padding: 7px 20px;
+  text-decoration: none;
+  border-radius: 25px;
+  color: cyan;
+  font-family: 'Convergence', sans-serif;
+}
+.see-more-btn:hover {
+  color: rgb(184, 184, 255);
+}
+
+#book {
+  width: 150px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(134, 134, 134);
+}
+
+.item {
+  font-size: 14px;
+  display: inline-block;
+  padding: 15px;
+  border-radius: 10px;
+  height: 248px;
+  box-shadow: 1px 3px 4px rgba(71, 71, 71, 0.323);
+  transition: box-shadow 0.4s ease;
+}
+.item:hover {
+  box-shadow: 2px 2px 5px rgb(106, 72, 185);
+}
+
+#book-name {
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 105px;
+  margin-top: 9px;
+  font-family: 'Convergence', sans-serif;
+}
+
+#price {
+  float: right;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.left-arrow {
+  width: 40px;
+  float: left;
+  margin-top: 160px;
+}
+.right-arrow {
+  width: 40px;
+  clear: right;
+  float: right;
+  margin-top: 160px;
+}
+
+.deal-msg {
+  display: inline-block;
+  padding: 2px 7px;
+  margin: 6px 5px 0 5px;
+  background-color: red;
+  color: white;
+  border-radius: 15px;
+}

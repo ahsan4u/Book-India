@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+.items-container {
+  margin-top: 10px;
+}
+
+.advertisment {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: url("../img-controller/advertisment/img1.jpg");
+  background-size: 100% 100%;
+  width: 90vw;
+  height: 90vh;
+  animation: imgSlider 10s linear infinite;
+}
+@keyframes imgSlider {
+  0% {
+    background-image: url("../img-controller/advertisment/img1.jpg");
+  }
+  10% {
+    background-image: url("../img-controller/advertisment/img1.jpg");
+  }
+  20% {
+    background-image: url("../img-controller/advertisment/img1.jpg");
+  }
+  30% {
+    background-image: url("../img-controller/advertisment/img2.jpg");
+  }
+  40% {
+    background-image: url("../img-controller/advertisment/img2.jpg");
+  }
+  50% {
+    background-image: url("../img-controller/advertisment/img3.jpg");
+  }
+  60% {
+    background-image: url("../img-controller/advertisment/img3.jpg");
+  }
+  70% {
+    background-image: url("../img-controller/advertisment/img4.jpg");
+  }
+  90% {
+    background-image: url("../img-controller/advertisment/img4.jpg");
+  }
+  100% {
+    background-image: url("../img-controller/advertisment/img1.jpg");
+  }
+}
+
+.circle-container {
+  margin: 30px 100px;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Convergence", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.circle-img {
+  width: 140px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 3px gray;
+  overflow: hidden;
+  transition: box-shadow 0.5s;
+}
+.circle-img:hover {
+  box-shadow: 2px 2px 7px red;
+}
+
+#name-tag {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.middleware {
+  margin: 100px 80px 0 80px;
+}
+
+.scroll {
+  border-bottom: 1px dotted gray;
+  background-color: rgba(255, 255, 255, 0.367);
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  padding: 10px 7px 10px 2px;
+  width: 81vw;
+  overflow: auto;
+  display: flex;
+  gap: 50px;
+}
+.scroll::-webkit-scrollbar {
+  width: 0;
+}

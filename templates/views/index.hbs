@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+
+    <link rel="stylesheet" href="/stylesheets/other.css">
+    <link rel="stylesheet" href="/stylesheets/book.css">
+    <style> a[href = "/"] { color: blue; }</style>
+</head>
+<body>
+
+    {{>top}}    
+<div class="items-container">
+    <div class="advertisment"></div>
+    <div class="circle-container">
+        <a href="/books">
+            <div>
+                <img src="./img-controller/circle/circle1.png" alt="" class="circle-img">
+                <p id="name-tag"><b> See all</b></p>
+            </div>
+        </a>
+        
+        <div><img src="./img-controller/circle/circle2.png" alt="" class="circle-img"><p id="name-tag"><b>Shop now</b></p></div>
+        <div><img src="./img-controller/circle/circle3.png" alt="" class="circle-img"><p id="name-tag"><b>New releases</b></p></div>
+        <div><img src="./img-controller/circle/circle4.png" alt="" class="circle-img"><p id="name-tag"><b>Bestsellers</b></p></div>
+        <div><img src="./img-controller/circle/circle5.png" alt="" class="circle-img"><p id="name-tag"><b>Gifting guide</b></p></div>
+    </div>
+    
+    <div class="middleware">
+        {{!-- (1) Top Deal Books --}}
+        <a class="see-more-btn" href="/books">See More...</a>   
+        <h2 id="categorie-heading">Top deals on text books</h2>
+        <img src="./img-controller/icons/right-arrow.png" alt=">" class="right-arrow">
+        <img src="./img-controller/icons/left-arrow.png" alt="<" class="left-arrow">
+
+        <div class="scroll">
+            {{#each topDeal}}
+                <div class="item">
+                    <a id="bookLink" href="/books/{{_id}}">
+                        <img id="book" src="./books/{{image}}" alt="{{image}}"><br>
+                        <div class="deal-msg"><small>Up to 59% off</small></div><span style="color: red;"><small>Deal</small></span><br>
+                        <span id="price">{{price}}₹</span>
+                        <span id="book-name">{{name}}</span>
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+
+        {{!-- (2) Best Seller Books --}}
+        <a class="see-more-btn" href="/books">See More...</a>
+        <h2 id="categorie-heading">Best Sellers</h2>
+        <img src="./img-controller/icons/right-arrow.png" alt=">" class="right-arrow">
+        <img src="./img-controller/icons/left-arrow.png" alt="<" class="left-arrow">
+
+        <div class="scroll">
+            {{#each bestSeller}}
+                <div class="item">
+                    <a id="bookLink" href="/books/{{_id}}">
+                        <img id="book" src="./books/{{image}}" alt=""><br>
+                        <div class="deal-msg"><small>Up to 59% off</small></div><span style="color: red;"><small>Deal</small></span><br>
+                        <span id="price">{{price}}₹</span>
+                        <span id="book-name">{{name}}</span>
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+
+        {{!-- (3) New Arrival Books --}}
+        <a class="see-more-btn" href="/books">See More...</a>
+        <h2 id="categorie-heading">New Arrivals</h2>
+        <img src="./img-controller/icons/right-arrow.png" alt=">" class="right-arrow">
+        <img src="./img-controller/icons/left-arrow.png" alt="<" class="left-arrow">
+        
+        <div class="scroll">
+            {{#each newArrival}}  
+                <div class="item">
+                    <a id="bookLink" href="/books/{{_id}}">
+                        <img id="book" src="./books/{{image}}" alt=""><br>
+                        <div class="deal-msg"><small>Up to 59% off</small></div><span style="color: red;"><small>Deal</small></span><br>
+                        <span id="price">{{price}}₹</span>
+                        <span id="book-name">{{name}}</span>
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+
+        {{!-- (4) Award Winner Books --}}
+        <a class="see-more-btn" href="/books">See More...</a>
+        <h2 id="categorie-heading">Award Winner Books</h2>
+        <img src="./img-controller/icons/right-arrow.png" alt=">" class="right-arrow">
+        <img src="./img-controller/icons/left-arrow.png" alt="<" class="left-arrow">
+        
+        <div class="scroll">
+            {{#each awardWinner}}
+                <div class="item">
+                    <a id="bookLink" href="/books/{{_id}}">
+                        <img id="book" src="./books/{{image}}" alt=""><br>
+                        <div class="deal-msg"><small>Up to 59% off</small></div><span style="color: red;"><small>Deal</small></span><br>
+                        <span id="price">{{price}}₹</span>
+                        <span id="book-name">{{name}}</span>
+                    </a>                    
+                </div>
+            {{/each}}
+        </div>
+
+        {{!-- (5) Non Fiction Books --}}
+        <a class="see-more-btn" href="/books">See More...</a>
+        <h2 id="categorie-heading">Non Fiction Book at Best Price</h2>
+        <img src="./img-controller/icons/right-arrow.png" alt=">" class="right-arrow">
+        <img src="./img-controller/icons/left-arrow.png" alt="<" class="left-arrow">
+        
+        <div class="scroll">
+            {{#each nonFiction}}
+                <div class="item">
+                    <a id="bookLink" href="/books/{{_id}}">
+                        <img id="book" src="./books/{{image}}" alt=""><br>
+                        <div class="deal-msg"><small>Up to 59% off</small></div><span style="color: red;"><small>Deal</small></span><br>
+                        <span id="price">{{price}}₹</span>
+                        <span id="book-name">{{name}}</span>
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+    <script src="./scripts/index.js"></script>
+    {{>navbarScrollEffect}}
+</body>
+</html>

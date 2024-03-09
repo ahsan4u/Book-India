@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+    
+    <link rel="stylesheet" href="/stylesheets/book.css">
+    <link rel="stylesheet" href="/stylesheets/all-books.css">
+</head>
+
+<body>
+    {{>top}}
+
+    <div class="items-container">
+        {{#if books.length}}
+            {{#each books}}
+                <div class="item">
+                    <a id="bookLink" href="/books/{{_id}}">
+                        <img id="book" src="/books/{{image}}" alt="{{image}}"><br>
+                        <div class="deal-msg"><small>Up to 59% off</small></div><span style="color: red;"><small>Deal</small></span><br>
+                        <span id="price">{{price}}₹</span>
+                        <span id="book-name">{{name}}</span>
+                    </a>
+                </div>
+            {{/each}}
+        {{else}}
+            <div class="error-block">
+                <h1 id="not-found-msg">Sorry, There is no any book present with the word <span id="errname">{{name}}</span></h1>
+            </div>
+        {{/if}}
+    </div>
+    
+    {{>navbarScrollEffect}}
+</body>
+</html>
