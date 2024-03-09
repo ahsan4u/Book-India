@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const URI =    `mongodb+srv://ahsan4u:0eQmQfAQUbOME3Qk@cluster0.buiagj2.mongodb.net/`;
+const URI =    `mongodb+srv://ahsan4u:ahsan1234@cluster0.buiagj2.mongodb.net/`;
 
 const connectDB = async ()=> {
     try {
