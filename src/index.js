@@ -5,7 +5,7 @@ const hbs = require('hbs');
 const PORT = 3000;
 const express = require('express');
 const session = require('express-session');
-const {Cart, Likes} = require('./modules')
+const {Cart, Likes} = require('./modules');
 const app = express();
 
 app.set('view engine', 'hbs');
