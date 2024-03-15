@@ -59,10 +59,6 @@ const textBooks = (req, res)=> {
     res.render('text-books');
 }
 
-const eBooks = async (req, res)=> {
-    res.render('e-books');
-}
-
 const feathured = (req, res)=> {
     res.render('feathured');
 }
@@ -78,7 +74,6 @@ module.exports = {
     addBook,
     eachBook,
     textBooks,
-    eBooks,
     feathured,
     about
 };

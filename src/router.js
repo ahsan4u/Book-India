@@ -12,7 +12,6 @@ router.route('/books').get(bookGet.allBooks);
 router.route('/find-book').get(bookGet.findBook);
 router.route('/books/:id').get(bookGet.eachBook);
 router.route('/text-books').get(bookGet.textBooks);
-router.route('/e-books').get(bookGet.eBooks);
 router.route('/feathured').get(bookGet.feathured);
 router.route('/about').get(bookGet.about);
 
