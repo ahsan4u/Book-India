@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
   background-image: url("../img-controller/advertisment/img1.jpg");
   background-size: 100% 100%;
   width: 90vw;
-  height: 90vh;
+  height: 280px;
   animation: imgSlider 10s linear infinite;
 }
 @keyframes imgSlider {
@@ -67,7 +67,7 @@ a {
 }
 
 .circle-img {
-  width: 140px;
+  width: 100px;
   height: 100px;
   border-radius: 50%;
   box-shadow: 2px 2px 3px gray;
