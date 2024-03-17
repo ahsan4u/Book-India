@@ -18,8 +18,13 @@ body::-webkit-scrollbar {
   background-image: url("../img-controller/advertisment/img1.jpg");
   background-size: 100% 100%;
   width: 90vw;
-  height: 280px;
+  height: 90vh;
   animation: imgSlider 10s linear infinite;
+}
+@media  only screen and (min-height: 400px) {
+ .advertisment {
+    height: 200xp;
+  }
 }
 @keyframes imgSlider {
   0% {
@@ -59,7 +64,9 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-around;
   font-family: "Convergence", sans-serif;
+  overflow: auto;
 }
+.circle-container-webkit-scrollbar{width:0};
 
 a {
   text-decoration: none;
