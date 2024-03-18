@@ -88,4 +88,4 @@
   .item { padding: 7px; }
   #book-name { font-size: 9px;
   #price { font-size: 10px }
-  #book { width: 130px; height: 180px; }
+  #book { width: 100px; height: 160px; margin-top: 5px; }
