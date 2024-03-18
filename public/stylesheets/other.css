@@ -25,8 +25,15 @@ body::-webkit-scrollbar {
 @media only screen and (max-width: 599px) {
   /* Android-specific styles here */
   .advertisment {
-    font-size: 14px;
     height: 200px;
+  }
+  .circle-container{
+    width: 90vw;
+    margin: 20px 10px;
+  }
+  .circle-img {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -70,7 +77,7 @@ body::-webkit-scrollbar {
   font-family: "Convergence", sans-serif;
   overflow: auto;
 }
-.circle-container::-webkit-scrollbar{width:0};
+.circle-container::-webkit-scrollbar{width: 0};
 
 a {
   text-decoration: none;
