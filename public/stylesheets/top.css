@@ -54,15 +54,6 @@ body::-webkit-scrollbar {
 
 #kart-count { background-color: rgb(3, 159, 3); top: -13px; }
 
-@media only screen and (max-width: 599px) {
-  .logo-img { width: 30px }
-  #site-name { font-size: 17px; margin-top: 9px; }
-  .other-logo sup { display: none; }
-  .cart-container, .like-container { display: none; }
-  .header { height: 40px }
-  .nav-page{ font-size: 8px; padding: 2px 5px; margin-left: 4px; }
-}
-
 .user-tag {
   height: 33px;
   padding: 2px 10px 2px 2px;
@@ -177,6 +168,15 @@ a[href='/add-book']:hover {
   height: 99%;
   float: right;
   border-radius: 20px;
+}
+
+@media only screen and (max-width: 599px) {
+  .logo-img { width: 30px }
+  #site-name { font-size: 17px; margin-top: 9px; }
+  .other-logo sup { display: none; }
+  .cart-container, .like-container { display: none; }
+  .header { height: 40px }
+  .nav-page{ font-size: 9px; padding: 2px 5px; margin-left: 4px; }
 }
 
 .items-container {
