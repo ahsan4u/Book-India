@@ -59,7 +59,8 @@ body::-webkit-scrollbar {
   #site-name { font-size: 17px; }
   .other-logo sup { display: none; }
   .cart-container, .like-container { display: none; }
-  .header { height: 45px }
+  .header { height: 40px }
+  .nav-page{ font-size: 11px; padding: 4px 10px; margin-left: 4px; }
 }
 
 .user-tag {
