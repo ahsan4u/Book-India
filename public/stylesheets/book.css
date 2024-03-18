@@ -85,4 +85,6 @@
   .left-arrow, .right-arrow { display: none; }
   #categorie-heading { font-size: 15px; width: 90vw; }
   .see-more-btn { margin: 5px 4px 0 0; font-size: 11px; }
+  .item { padding: 7px; }
+  
 }
