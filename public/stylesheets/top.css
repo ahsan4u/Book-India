@@ -177,6 +177,9 @@ a[href='/add-book']:hover {
   .cart-container, .like-container { display: none; }
   .header { height: 40px }
   .nav-page{ font-size: 9px; padding: 2px 5px; margin-left: 4px; }
+  .search-container { margin-right: 5px; width: 90px; height: 15px; }
+  #search { font-size: 9px; }
+  #search-btn { width: 40px;}
 }
 
 .items-container {
