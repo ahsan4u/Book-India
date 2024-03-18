@@ -21,11 +21,15 @@ body::-webkit-scrollbar {
   height: 90vh;
   animation: imgSlider 10s linear infinite;
 }
-@media  only screen and (min-height: 400px) {
- .advertisment {
-    height: 200xp;
+
+@media only screen and (max-width: 599px) {
+  /* Android-specific styles here */
+  .advertisment {
+    font-size: 14px;
+    height: 200px;
   }
 }
+
 @keyframes imgSlider {
   0% {
     background-image: url("../img-controller/advertisment/img1.jpg");
@@ -66,7 +70,7 @@ body::-webkit-scrollbar {
   font-family: "Convergence", sans-serif;
   overflow: auto;
 }
-.circle-container-webkit-scrollbar{width:0};
+.circle-container::-webkit-scrollbar{width:0};
 
 a {
   text-decoration: none;
