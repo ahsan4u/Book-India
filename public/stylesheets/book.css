@@ -86,5 +86,6 @@
   #categorie-heading { font-size: 15px; width: 90vw; }
   .see-more-btn { margin: 5px 4px 0 0; font-size: 11px; }
   .item { padding: 7px; }
-  
-}
+  #book-name { font-size: 9px;
+  #price { font-size: 10px }
+  #book { width: 130px; height: 180px; }
