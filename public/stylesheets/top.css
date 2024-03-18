@@ -55,7 +55,7 @@ body::-webkit-scrollbar {
 #kart-count { background-color: rgb(3, 159, 3); top: -13px; }
 
 .user-tag {
-  height: 33px;
+  height: 28px;
   padding: 2px 10px 2px 2px;
   margin-right: 20px;
   background-color: rgb(42, 46, 49);
@@ -63,8 +63,8 @@ body::-webkit-scrollbar {
 }
 
 .user-img {
-  width: 33px;
-  height: 33px;
+  width: 28px;
+  height: 28px;
   border-radius: 30px;
 }
 
@@ -176,10 +176,10 @@ a[href='/add-book']:hover {
   .other-logo sup { display: none; }
   .cart-container, .like-container { display: none; }
   .header { height: 40px }
-  .nav-page{ font-size: 9px; padding: 2px 5px; margin-left: 4px; }
-  .search-container { margin-right: 5px; width: 90px; height: 15px; }
+  .nav-page{ font-size: 9px; padding: 3px 7px; margin-left: -2px; }
+  .search-container { margin-right: 5px; width: 170px; height: 15px; }
   #search { font-size: 9px; }
-  #search-btn { width: 40px;}
+  #search-btn { width: 28px;}
 }
 
 .items-container {
