@@ -71,12 +71,6 @@
   float: right;
   margin-top: 160px;
 }
-@media only screen and (max-width: 599px) {
-  .left-arrow, .right-arrow { display: none; }
-  #book { width: 75px; height: 100px; }
-  .item { height: 124px; font-size: 12px; }
-  #categorie-heading { font-size: 16px }
-}
 
 .deal-msg {
   display: inline-block;
@@ -85,4 +79,12 @@
   background-color: red;
   color: white;
   border-radius: 15px;
+}
+
+@media only screen and (max-width: 599px) {
+  .left-arrow, .right-arrow { display: none; }
+  #book { width: 50px; height: 100px; }
+  .item { height: 124px; font-size: 12px; }
+  #categorie-heading { font-size: 15px; width: 95vw; }
+  .see-more-btn { margin: 5px 20px 0 0; font-size: 11px; }
 }
