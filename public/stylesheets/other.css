@@ -28,14 +28,14 @@ body::-webkit-scrollbar {
     height: 200px;
   }
   .circle-container{
-    margin: 20px 0;
+    margin: 20px 0; width: 90vw;
   }
   .circle-img {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
   }
-  .items-container { width: 95vw; margin: auto}
-  #name-tag { font-size: 11px; }
+  .items-container { margin: auto}
+  #name-tag { font-size: 9px; }
   .middleware { margin: 100px 0 0 0; }
 }
 
@@ -77,9 +77,7 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-around;
   font-family: "Convergence", sans-serif;
-  overflow: auto;
 }
-.circle-container::-webkit-scrollbar{width: 0};
 
 a {
   text-decoration: none;
