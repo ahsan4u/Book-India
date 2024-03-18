@@ -111,7 +111,7 @@ a {
     height: 200px;
   }
   .circle-container{
-    margin: 20px 0; width: 90vw;
+    margin: 20px auto; width: 90vw;
   }
   .circle-img {
     width: 50px;
