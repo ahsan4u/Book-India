@@ -176,7 +176,7 @@ a[href='/add-book']:hover {
   .other-logo sup { display: none; }
   .cart-container, .like-container { display: none; }
   .header { height: 40px }
-  .user-tag { transform: scale(0.8); }
+  .user-tag { transform: scale(0.8); margin-right: 8px; margin-top: -10px}
   .nav-page{ font-size: 9px; padding: 3px 7px; margin-left: 4px; }
   a[href='/']:not(.header a[href='/']) { margin-left: 6px; }
   .search-container { margin-right: 6px; width: 160px; height: 15px; }
