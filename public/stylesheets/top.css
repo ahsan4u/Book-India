@@ -56,11 +56,11 @@ body::-webkit-scrollbar {
 
 @media only screen and (max-width: 599px) {
   .logo-img { width: 30px }
-  #site-name { font-size: 17px; }
+  #site-name { font-size: 17px; margin-top: 9px; }
   .other-logo sup { display: none; }
   .cart-container, .like-container { display: none; }
   .header { height: 40px }
-  .nav-page{ font-size: 11px; padding: 4px 10px; margin-left: 4px; }
+  .nav-page{ font-size: 8px; padding: 2px 5px; margin-left: 4px; }
 }
 
 .user-tag {
