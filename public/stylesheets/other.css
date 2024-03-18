@@ -37,6 +37,7 @@ body::-webkit-scrollbar {
   }
   .items-container { width: 95vw; margin: auto}
   #name-tag { font-size: 11px; }
+  .middleware { margin: 100px 20px 0 20px; }
 }
 
 @keyframes imgSlider {
