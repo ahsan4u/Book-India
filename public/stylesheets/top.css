@@ -54,6 +54,15 @@ body::-webkit-scrollbar {
 
 #kart-count { background-color: rgb(3, 159, 3); top: -13px; }
 
+@media only screen and (max-width: 599px) {
+  .logo-img { width: 30px }
+  #site-name { font-size: 17px; }
+  .other-logo sup { display: hidden }
+  .cart-container, .like-container { display: hidden }
+  .user-tag{ translate: scale(0.9);
+  .header { height: 45px }
+}
+
 .user-tag {
   height: 33px;
   padding: 2px 10px 2px 2px;
