@@ -28,7 +28,6 @@ body::-webkit-scrollbar {
     height: 200px;
   }
   .circle-container{
-    width: 110vw;
     margin: 20px 0;
   }
   .circle-img {
@@ -37,7 +36,7 @@ body::-webkit-scrollbar {
   }
   .items-container { width: 95vw; margin: auto}
   #name-tag { font-size: 11px; }
-  .middleware { margin: 100px 20px 0 20px; }
+  .middleware { margin: 100px 0 0 0; }
 }
 
 @keyframes imgSlider {
