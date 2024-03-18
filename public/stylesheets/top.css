@@ -57,9 +57,8 @@ body::-webkit-scrollbar {
 @media only screen and (max-width: 599px) {
   .logo-img { width: 30px }
   #site-name { font-size: 17px; }
-  .other-logo sup { display: hidden }
-  .cart-container, .like-container { display: hidden }
-  .user-tag{ translate: scale(0.9);
+  .other-logo sup { display: none; }
+  .cart-container, .like-container { display: none; }
   .header { height: 45px }
 }
 
