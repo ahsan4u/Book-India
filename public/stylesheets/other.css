@@ -22,23 +22,6 @@ body::-webkit-scrollbar {
   animation: imgSlider 10s linear infinite;
 }
 
-@media only screen and (max-width: 599px) {
-  /* Android-specific styles here */
-  .advertisment {
-    height: 200px;
-  }
-  .circle-container{
-    margin: 20px 0; width: 90vw;
-  }
-  .circle-img {
-    width: 30px;
-    height: 30px;
-  }
-  .items-container { margin: auto}
-  #name-tag { font-size: 9px; }
-  .middleware { margin: 100px 0 0 0; }
-}
-
 @keyframes imgSlider {
   0% {
     background-image: url("../img-controller/advertisment/img1.jpg");
@@ -121,3 +104,21 @@ a {
 .scroll::-webkit-scrollbar {
   width: 0;
 }
+
+@media only screen and (max-width: 599px) {
+  /* Android-specific styles here */
+  .advertisment {
+    height: 200px;
+  }
+  .circle-container{
+    margin: 20px 0; width: 90vw;
+  }
+  .circle-img {
+    width: 30px;
+    height: 30px;
+  }
+  .items-container { margin: auto}
+  #name-tag { font-size: 9px; }
+  .middleware { margin: 100px 0 0 0; }
+}
+
