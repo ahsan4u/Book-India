@@ -184,3 +184,4 @@ a[href='/add-book']:hover {
   #search-btn { width: 28px;}
   #search-icon { width: 7px; margin-top: 2px; }
   .items-container { margin-top: 10px; }
+  .navbar { padding-top: 3px; padding-bottom: 2px; }
