@@ -119,7 +119,7 @@ a {
   }
   .items-container { margin: 10px auto}
   #name-tag { font-size: 9px; }
-  .middleware { margin: 50px 0 0 0; }
-  .scroll { width: 90vw; }
+  .middleware { margin: 25px 0 0 0; }
+  .scroll { width: 90vw; margin-bottom: 50px;}
 }
 
