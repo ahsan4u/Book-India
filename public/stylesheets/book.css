@@ -87,7 +87,7 @@
   .see-more-btn { margin: 0 4px 0 0; font-size: 11px; }
   .item { padding: 7px; height:164px; border-radius: 5px; }
   #book-name { font-size: 10px; width: 55px; margin-top: 4px; }
-  #price { font-size: 10px; }
+  #price { font-size: 10px; margin-top: -2px;}
   #book { width: 100px; height: 129px; border-radius: 3px;}
   .deal-msg { font-size: 10px; margin: 3px 5px 0 1px; }
 }
