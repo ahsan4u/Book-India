@@ -180,7 +180,7 @@ a[href='/add-book']:hover {
   .nav-page{ font-size: 9px; padding: 3px 7px; margin-left: 4px; }
   a[href='/']:not(.header a[href='/']) { margin-left: 6px; }
   .search-container { margin-right: 6px; width: 160px; height: 15px; }
-  #search { font-size: 9px; margin-left: 5px; border: 1px solid black; }
+  #search { height: 90%; font-size: 9px; margin-left: 5px; border: 1px solid black; }
   #search-btn { width: 28px;}
   #search-icon { width: 7px; margin-top: 2px; }
   .items-container { margin-top: 10px; }
