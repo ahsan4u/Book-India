@@ -12,7 +12,6 @@ body::-webkit-scrollbar {
 
 .advertisment {
   margin: 0 auto;
-  margin-bottom: 10px;
   border-radius: 10px;
   overflow: hidden;
   background-image: url("../img-controller/advertisment/img1.jpg");
@@ -119,7 +118,7 @@ a {
   }
   .items-container { margin: 10px auto}
   #name-tag { font-size: 9px; }
-  .middleware { margin: 25px 0 0 0; }
-  .scroll { width: 90vw; margin-bottom: 50px; gap: 11px;}
+  .middleware { margin: 15px 0 0 0; }
+  .scroll { width: 90vw; margin-bottom: 30px; margin-top: 4px; gap: 11px;}
 }
 
