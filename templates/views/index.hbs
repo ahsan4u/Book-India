@@ -38,9 +38,10 @@
                 <div class="item">
                     <a id="bookLink" href="/books/{{_id}}">
                         <img id="book" src="./books/{{image}}" alt="{{image}}"><br>
-                        <div class="deal-msg"><small>Up to 59% off</small></div><br>
+                        {{!-- <div class="deal-msg"><small>Up to 59% off</small></div><br> --}}
+                        <span id="book-name">{{name}}</span><br>
                         <span id="price">{{price}}₹</span>
-                        <span id="book-name">{{name}}</span>
+                        <span id="auther">{{auther}}</span>
                     </a>
                 </div>
             {{/each}}
