@@ -92,5 +92,5 @@
   #price { font-size: 10px; margin-top: 1px;}
   #book { width: 100px; height: 129px; border-radius: 3px;}
   .deal-msg { font-size: 10px; margin: 3px 5px 0 1px; }
-  #auther { font-size: 8px; margin-top: -2px;}
+  #auther { font-size: 8px; position: relative; top: -2px;}
 }
