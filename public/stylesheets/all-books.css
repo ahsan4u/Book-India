@@ -2,7 +2,7 @@
 
 a { text-decoration: none;  color: black; }
 
-.items-container { width: 97vw; margin: 0 auto; margin-top: 10px;}
+.items-container { width: 97vw; margin: 10px auto;}
 
 .item { margin: 4px; }
 
