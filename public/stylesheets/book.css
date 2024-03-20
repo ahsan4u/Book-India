@@ -81,6 +81,8 @@
   border-radius: 15px;
 }
 
+#auther { color: green; font-size: 12px; display: inline-block; margin-top: 4px;}
+
 @media only screen and (max-width: 599px) {
   .left-arrow, .right-arrow { display: none; }
   #categorie-heading { font-size: 15px; width: 90vw; }
@@ -90,4 +92,5 @@
   #price { font-size: 10px; margin-top: 3px;}
   #book { width: 100px; height: 129px; border-radius: 3px;}
   .deal-msg { font-size: 10px; margin: 3px 5px 0 1px; }
+  #auther { font-size: 9px; }
 }
