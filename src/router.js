@@ -14,6 +14,7 @@ router.route('/books/:id').get(bookGet.eachBook);
 router.route('/text-books').get(bookGet.textBooks);
 router.route('/feathured').get(bookGet.feathured);
 router.route('/about').get(bookGet.about);
+router.route('/contact').get(bookGet.contact);
 
 router.route('/add-book').get(bookGet.addBook).post(bookPost.bookImage, bookPost.book);
 
