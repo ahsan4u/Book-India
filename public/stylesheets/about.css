@@ -19,11 +19,11 @@ width: 55%;
 .image-section {
   float: right;
   width: 40%;
-  margin-top: 20px;
 }
 
 .image-section img{
-width: 100%;
+  width: 100%;
+  margin-top: 20px;
 }
 .content-section .title h1{
 text-transform: uppercase;
@@ -85,7 +85,7 @@ padding:0px 10px;
   .content-section .social i{ font-size: 25px; padding:0px 8px; }
   .content-section .content .button a{ font-size: 19px; padding:6px 20px;}
   .content-section .social { margin: 25px 15px; }
-  .image-section { margin-top: 0; width: 100% }
+  .image-section { width: 100% }
   .image-section img { width: 90vw; }
-  .section { min-height: 70vh; }
+  .section { min-height: 80vh; }
 }
