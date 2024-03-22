@@ -171,6 +171,12 @@ a[href='/add-book']:hover {
   border-radius: 20px;
 }
 
+.footer-img {
+  width: 100vw; height: 80px;
+  background-image: url("../img-controller/icons/footer.png");
+  background-size: 100% 100%;
+}
+
 @media only screen and (max-width: 599px) {
   .logo-img { width: 30px }
   #site-name { font-size: 17px; margin-top: 9px; }
