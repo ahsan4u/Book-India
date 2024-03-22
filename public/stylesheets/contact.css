@@ -14,6 +14,10 @@
   height: 34px;
 }
 
+@media only screen and (max-width: 599px) {
+  height: 15px;
+}
+
 .container {
   position: relative;
   width: 100%;
