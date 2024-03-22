@@ -79,4 +79,5 @@ padding:0px 10px;
   .content { width: 85vw; }
   .content-section .social i{ font-size: 25px; padding:0px 5px; }
   .content-section .content .button a{ font-size: 19px; padding:6px 20px;}
+  .content-section .social { margin: 25px 20px; }
 }
