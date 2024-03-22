@@ -18,7 +18,7 @@ contact-container {
   justify-content: center;
 }
 
-info-form {
+.info-form {
   width: 100%;
   max-width: 820px;
   background: #fafafa;
@@ -59,7 +59,7 @@ info-form {
   position: absolute;
   width: 26px;
   height: 26px;
-  background: rgb(163,65,195);
+  background: rgb(104, 34, 127);
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
