@@ -22,10 +22,7 @@ width: 55%;
 }
 
 .image-section img{
-clip-path: inset(0 50px 50px 50px);
-box-shadow: 0 0 60px white;
 width: 100%;
-border-radius: 5px;
 }
 .content-section .title h1{
 text-transform: uppercase;
