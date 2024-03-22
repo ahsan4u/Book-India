@@ -11,7 +11,7 @@
 }
 
 .search-container {
-  height: 34px;
+  .search-container { height: 34px; }
 }
 
 @media only screen and (max-width: 599px) {
