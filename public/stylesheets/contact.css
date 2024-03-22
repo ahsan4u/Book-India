@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+.user-tag {
+  height: 37px;
+}
+
+.search-container {
+  height: 34px;
+}
+
 .container {
   position: relative;
   width: 100%;
