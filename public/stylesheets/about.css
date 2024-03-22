@@ -19,7 +19,7 @@ width: 55%;
 .image-section {
   float: right;
   width: 40%;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .image-section img{
@@ -87,5 +87,5 @@ padding:0px 10px;
   .content-section .social { margin: 25px 15px; }
   .image-section { margin-top: 0; width: 100% }
   .image-section img { width: 90vw; }
-  .section { min-height: 95vh; }
+  .section { min-height: 70vh; }
 }
