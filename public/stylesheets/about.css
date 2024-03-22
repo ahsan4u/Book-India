@@ -19,6 +19,7 @@ width: 55%;
 .image-section img{
 width: 100%;
 height: auto;
+border-radius: 5px;
 }
 .content-section .title{
 text-transform: uppercase;
@@ -33,7 +34,6 @@ font-size: 21px;
 
 .content-section .content p{
 font-family: 'Poppins', sans-serif;
-font-family: sans-serif;
 margin-top: 10px;
 font-size: 18px;
 Line-height: 1.5;
@@ -74,5 +74,7 @@ padding:0px 10px;
 }
 
 @media only screen and (max-width: 799px) {
-  .content { width: 80vw; }
+  .content { width: 85vw; }
+  .content-section .content h3 { font-size: 19px;
+  .content-section .social i{ font-size: 25px;
 }
