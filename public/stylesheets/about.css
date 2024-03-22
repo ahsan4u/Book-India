@@ -32,7 +32,7 @@ font-size: 28px;
 
 .content-section .content h3{
 margin-top: 20px;
-color:#5d5d5d;
+color: linear-gradient(to left, rgb(104, 34, 127), rgb(103, 31, 127));
 font-size: 21px;
 }
 
