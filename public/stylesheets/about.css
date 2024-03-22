@@ -23,9 +23,8 @@ width: 55%;
 
 .image-section img{
 clip-path: inset(0 50px 50px 50px);
-box-shadow: inset 0 0 10px #ddd;
+box-shadow: 1 1 20px white;
 width: 100%;
-height: auto;
 border-radius: 5px;
 }
 .content-section .title h1{
@@ -89,4 +88,5 @@ padding:0px 10px;
   .content-section .content .button a{ font-size: 19px; padding:6px 20px;}
   .content-section .social { margin: 25px 15px; }
   .image-section { width: 100% }
+  .image-section img { width: 90vw;
 }
