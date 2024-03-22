@@ -32,13 +32,16 @@ font-size: 21px;
 }
 
 .content-section .content p{
+font-family: 'Poppins', sans-serif;
+font-family: sans-serif;
 margin-top: 10px;
 font-size: 18px;
 Line-height: 1.5;
 }
 
 .content-section .content .button {
-margin-top: 30px;
+  margin-top: 30px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .content-section .content .button a{
@@ -48,11 +51,13 @@ text-decoration: none;
 color:#fff;
 font-size: 25px;
 Letter-spacing: 1.5px;
+font-family: 'Poppins', sans-serif;
 }
 
 .content-section .content .button a:hover{
 background-color: #a52a2a;
 color:#fff;
+font-family: 'Poppins', sans-serif;
 }
 
 .content-section .social{
@@ -66,4 +71,8 @@ padding:0px 10px;
 }
 .content-section .social i:hover{
   color:#3d3d3d;
+}
+
+@media only screen and (max-width: 799px) {
+  .content { width: 80vw; }
 }
