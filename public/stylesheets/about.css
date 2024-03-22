@@ -23,7 +23,7 @@ width: 55%;
 
 .image-section img{
   width: 100%;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .content-section .title h1{
 text-transform: uppercase;
@@ -87,5 +87,5 @@ padding:0px 10px;
   .content-section .social { margin: 25px 15px; }
   .image-section { width: 100% }
   .image-section img { width: 90vw; }
-  .section { min-height: 80vh; }
+  .section { min-height: 88vh; }
 }
