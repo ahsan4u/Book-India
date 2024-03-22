@@ -67,6 +67,10 @@ const about = (req, res)=> {
     res.render('about');
 }
 
+const contact = (req, res) => {
+    res.render('contact');
+}
+
 module.exports = {
     home,
     allBooks,
@@ -75,5 +79,6 @@ module.exports = {
     eachBook,
     textBooks,
     feathured,
-    about
+    about,
+    contact
 };
