@@ -74,8 +74,9 @@ padding:0px 10px;
 }
 
 @media only screen and (max-width: 899px) {
-  .content-section .title { font-size: 24px; }
+  .container{ padding-top: 30px; }
+  .content-section .title { font-size: 20px; }
   .content { width: 85vw; }
   .content-section .social i{ font-size: 25px; }
-  .content-section .content .button { font-size: 25px; }
+  .content-section .content .button { font-size: 22px; }
 }
