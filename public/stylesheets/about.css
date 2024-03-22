@@ -86,4 +86,5 @@ padding:0px 10px;
   .content-section .social { margin: 25px 15px; }
   .image-section { width: 100% }
   .image-section img { width: 90vw; }
+  .section { min-height: 80vh; }
 }
