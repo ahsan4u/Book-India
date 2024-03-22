@@ -17,7 +17,7 @@ width: 55%;
 }
 
 .image-section img{
-clip-path: inset(0 20px 0 20px);
+clip-path: inset(0 50px 0 50px);
 width: 100%;
 height: auto;
 border-radius: 5px;
