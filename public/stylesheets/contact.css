@@ -343,7 +343,7 @@ textarea.input {
 
 @media (max-width: 480px) {
   .container {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .contact-info:before {
