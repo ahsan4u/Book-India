@@ -355,7 +355,7 @@ textarea.input {
     display: none;
   }
 
-  form,
+  .main-form-tag,
   .contact-info {
     padding: 1.7rem 1.6rem;
   }
