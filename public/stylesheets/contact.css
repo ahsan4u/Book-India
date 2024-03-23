@@ -342,7 +342,7 @@ textarea.input {
 }
 
 @media (max-width: 480px) {
-  .container { padding: 0; }
+  .container { padding: 0; padding-top: 1rem; }
 
   .contact-info:before {
     display: none;
