@@ -6,9 +6,16 @@
   box-sizing: border-box;
 }
 
-body,
-input {
-  font-family: "Poppins", sans-serif;
+.user-tag {
+  height: 37px;
+}
+
+.search-container {
+  .search-container { height: 34px; }
+}
+
+@media only screen and (max-width: 599px) {
+ .search-container{ height: 18px; }
 }
 
 .container {
@@ -39,7 +46,7 @@ input {
   z-index: 5;
 }
 
-form {
+.sign-up-form, .sign-in-form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -374,7 +381,7 @@ form.sign-in-form {
 }
 
 @media (max-width: 570px) {
-  form {
+  .sign-up-form, .sign-in-form {
     padding: 0 1.5rem;
   }
 
