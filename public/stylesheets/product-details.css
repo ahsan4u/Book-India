@@ -27,7 +27,7 @@
 
 .off-msg { font-size: 11px; color: green; }
 
-.price-before { position: relative; }
+.price-before { position: relative; color: red; }
 .price-before::before {
   content: "";
   position: absolute;
@@ -124,7 +124,7 @@
   .price-qty {
     display: flex; justify-content: space-around;
     width: 80vw;
-    margin: 10px 0;
+    margin: 10px 0; margin-bottom: 2px;
   }
   
   .description-heading {font-size: 17px;}
