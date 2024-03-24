@@ -7,7 +7,7 @@
   width: 85vw;
   margin: auto;
   border: 1px solid black;
-  display: flex; justify-content: center;
+  display: flex; justify-content: space-between;
 }
 
 .product-img-container {
