@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+    
+    <link rel="stylesheet" href="/stylesheets/other.css">
+    <link rel="stylesheet" href="/stylesheets/book.css">
+
+    <link rel="stylesheet" href="/stylesheets/product-details.css">
+</head>
+<body>
+    {{>top}}
+
+  <div class="items-container">
+    <section class="sproduct">
+      <div class="row">
+        <img id="imgaeTemp" src="/books/{{book.image}}" alt="">
+      </div>
+      <div class="row"></div>
+    </section>
+  </div>
+
+  <!-- {{>footer}} -->
+
+    {{>navbarScrollEffect}}   
+    <script src="/scripts/index.js"></script>
+    <script>
+        function addToCart(bookId) {
+          fetch(`/add-to-cart/${bookId}`,
+           {
+               method: 'post',
+               headers: { 'Content-Type': `application/json` }
+           })
+           .then((respone)=> {
+           if(!respone.ok) {
+               console.log('an error is occured');
+           }})
+           .catch((error)=> {
+               alert('error to add item to the cart');
+               console.log('script fetch ',error);
+           });
+        }
+
+        function addToLike(bookId) {
+          fetch(`/add-to-likes/${bookId}`,
+           {
+               method: 'post',
+               headers: { 'Content-Type': `application/json` }
+           })
+           .then((respone)=> {
+           if(!respone.ok) {
+               console.log('an error is occured');
+           }})
+           .catch((error)=> {
+               alert('You are not logged in');
+               console.log('script fetch ',error);
+           });
+        }
+    </script>
+</body>
