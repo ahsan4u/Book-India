@@ -17,8 +17,10 @@
   display: grid; align-items: center; justify-items: center;
 }
 @media only screen and (max-width: 599px) {
-  width: 100%;
-  height: 55vh;
+  .product-img-container {
+    width: 100%;
+    height: 55vh;
+  }
 }
 .product-img {
   width: 85%;
