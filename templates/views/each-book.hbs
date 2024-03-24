@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+    
+    <link rel="stylesheet" href="/stylesheets/other.css">
+    <link rel="stylesheet" href="/stylesheets/book.css">
+
+    <link rel="stylesheet" href="/stylesheets/product-details.css">
+</head>
+<body>
+    {{>top}}
+
+  <div class="items-container">
+    <div class="first-row">
+      <div class="product-img-container">
+        <img class="product-img" src="/books/{{book.image}}" alt="">
+      </div>
+      <div class="product-details-container">
+          <h1 class="product-name">{{book.name}}</h1>
+          
+          <div class="product-details">
+           {{#if book.publishedDate}}<p>Released: {{book.publishedDate}}</p>{{/if}}
+           {{#if book.auther}}<p>By: {{book.auther}} <small> (Auther)</small></p>{{/if}}
+           {{#if book.publisher}}<p class="publisher">Publisher: <span>{{book.publisher}}</span></p>{{/if}}
+          </div>
+
+          <div class="price-container">
+            <p id="new-price">₹{{book.price}}</p>
+            <p id="price-before">Save: ₹340 <span>(40%) M.R.P.: {{book.price}}</p>
+          </div>
+
+          <div class="buy-container">
+            <label for="qty">Qty: </label>
+            <select name="qty" id="qty">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            {{#if user}}
+             <input id="cart" onclick="addToCart('{{book._id}}');" type="submit" value="add to cart">
+             <input id="buy" type="button" value="Buy Now">
+            {{else}}
+             <a href="/sign-in-up"><input id="cart" type="button" value="Add To Cart"></a>
+             <input id="buy" type="button" value="Buy Now">
+            {{/if}}
+          </div>
+          
+          <h2 id="about-book">Book Description:</h2>
+
+          <div class="description">{{book.description}}</div>   
+      </div>
+    </div>
+  </div>
+
+  <!-- {{>footer}} -->
+
+    {{>navbarScrollEffect}}   
+    <script src="/scripts/index.js"></script>
+    <script>
+        function addToCart(bookId) {
+          fetch(`/add-to-cart/${bookId}`,
+           {
+               method: 'post',
+               headers: { 'Content-Type': `application/json` }
+           })
+           .then((respone)=> {
+           if(!respone.ok) {
+               console.log('an error is occured');
+           }})
+           .catch((error)=> {
+               alert('error to add item to the cart');
+               console.log('script fetch ',error);
+           });
+        }
+
+        function addToLike(bookId) {
+          fetch(`/add-to-likes/${bookId}`,
+           {
+               method: 'post',
+               headers: { 'Content-Type': `application/json` }
+           })
+           .then((respone)=> {
+           if(!respone.ok) {
+               console.log('an error is occured');
+           }})
+           .catch((error)=> {
+               alert('You are not logged in');
+               console.log('script fetch ',error);
+           });
+        }
+    </script>
+</body>
