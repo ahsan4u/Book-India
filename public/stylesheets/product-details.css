@@ -42,9 +42,10 @@
 .qty { width: 50px; border: 1px solid balck; border-radius: 3px; }
 
 #cart, #buy {
-  width: 100px; height: 30px;
+  width: 100px; height: 40px;
   color: white;
   background-color: green;
+  border-style: none;
   border-radius: 5px;
 }
 
@@ -64,7 +65,7 @@
   
   #cart, #buy {
   display: block;
-  width: 100%
+  width: 100% height: 50px;
   }
   
   .description-heading {font-size: 17px;}
