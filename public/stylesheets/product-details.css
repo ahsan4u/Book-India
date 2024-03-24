@@ -26,6 +26,8 @@
 }
 
 .off-msg { font-size: 10px; color: lightgreen; }
+
+.price-before { position: relative; }
 .price-before::before {
   content: "";
   position: absolute;
@@ -55,7 +57,7 @@
 }
 
 .off-msg {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .plus,.minus {
