@@ -25,7 +25,7 @@
   width: 50vw;
 }
 
-.off-msg { font-size: 10px; color: lightgreen; }
+.off-msg { font-size: 11px; color: green; }
 
 .price-before { position: relative; }
 .price-before::before {
@@ -33,10 +33,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 40%;
   height: 1px;
   background-color: red;
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
   transform-origin: 0 0;
 }
 
