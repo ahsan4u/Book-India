@@ -4,7 +4,7 @@
 }
 
 .first-row {
-  width: 80vw;
+  width: 85vw;
   margin: auto;
   border: 1px solid black;
 }
@@ -14,11 +14,11 @@
   height: 70vh;
   border: 1px solid black;
   margin-right: 10px;
+  display: grid; align-items: center; justify-items: center;
 }
 
 .product-img {
   width: 70%;
-  margin: auto;
   border-radius: 4px;
 }
 
