@@ -16,6 +16,7 @@
       <div class="product-img-container">
         <img class="product-img" src="/books/{{book.image}}" alt="">
       </div>
+        
       <div class="product-details-container">
           <h1 class="name-heading">{{book.name}}</h1>
           
@@ -25,35 +26,32 @@
            {{#if book.publisher}}<p class="publisher">Publisher: <span>{{book.publisher}}</span></p>{{/if}}
           </div>
 
-          <div class="price-container">
+          <div class="price-qty">
             <p id="new-price">₹{{book.price}}</p>
-          </div>
-
-          <div class="buy-container">
             <div class="qty-container">
-                <span class="minus">-</span>
-                <input type="number" name="qty" value="1" class="qty" disabled>
-                <span class="plus">+</span>
+              <span class="minus">-</span>
+              <input type="number" name="qty" value="1" class="qty" disabled>
+              <span class="plus">+</span>
             </div>
+          </div> <!-- buy-container --> 
+          
+          <p id="price-before">Save: ₹340 <span>(40%) M.R.P.: {{book.price}}</span></p>
               
-            <p id="price-before">Save: ₹340 <span>(40%) M.R.P.: {{book.price}}</span></p>
-              
-            {{#if user}}
-             <input id="cart" onclick="addToCart('{{book._id}}');" type="submit" value="add to cart">
-             <input id="buy" type="button" value="Buy Now">
-            {{else}}
-             <a href="/sign-in-up"><input id="cart" type="button" value="Add To Cart"></a>
-             <input id="buy" type="button" value="Buy Now">
-            {{/if}}
-          </div> <!-- buy-container -->
+          {{#if user}}
+            <input id="cart" onclick="addToCart('{{book._id}}');" type="submit" value="add to cart">
+            <input id="buy" type="button" value="Buy Now">
+          {{else}}
+            <a href="/sign-in-up"><input id="cart" type="button" value="Add To Cart"></a>
+            <input id="buy" type="button" value="Buy Now">
+          {{/if}}
           
           <h2 class="description-heading">Book Description:</h2>
 
           <div class="description">{{book.description}}</div>   
       </div> <!-- product-details-container -->
-    </div> <!-- items-container -->
+    </div> <!-- first row -->
       
-  </div>
+  </div> <!-- items-container -->
 
   <!-- {{>footer}} -->
 
