@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.first-row {
+  width: 80vw;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.product-img-container {
+  width: 30vw;
+  height: 70vh;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+.product-img {
+  width: 70%;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.product-details-container {
+  float: right;
+  width: 45vw;
+}
