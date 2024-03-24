@@ -18,13 +18,18 @@
 }
 
 .product-img {
-  width: 70%;
+  width: 85%;
   border-radius: 4px;
 }
 
 .product-details-container {
-  width: 45vw;
+  width: 50vw;
 }
 
-.product-name {
+.name-heading {
   font-size: 24px;
+}
+
+.description-heading {
+  font-size: 22px;
+}
