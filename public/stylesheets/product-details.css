@@ -48,7 +48,10 @@
   padding: 3px 8px; background-color: lightgreen;
   border: 1px solid balck; border-radius: 3px;
 }
-.minus{background-color: #ffcccc;}
+.minus{
+  background-color: #ffcccc;
+  padding: 3px 10px;
+}
 
 .qty {
   width: 50px; height: 40px; 
@@ -60,7 +63,7 @@
 }
 
 .qty-container {
-  width: 150px;
+  width: 130px;
   display: flex;
   justify-content: space-between;
 }
