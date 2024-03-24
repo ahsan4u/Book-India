@@ -1,6 +1,7 @@
-* {
+*:not(#site-name) {
   margin: 0;
   padding: 0;
+  font-family: "Convergence", sans-serif;
 }
 
 .first-row {
@@ -33,23 +34,41 @@
   font-size: 19px;
 }
 
+#new-price {
+  font-size: 22;
+}
+
 .plus,.minus {
   font-size: 19px;
-  padding: 3px; background-color: lightgreen;
+  padding: 3px 8px; background-color: lightgreen;
   border: 1px solid balck; border-radius: 3px;
 }
-.minus{background-color: lightred;}
-.qty { width: 50px; height: 50px; border-style: none; border: 1px solid balck; border-radius: 3px; }
+.minus{background-color: #ffcccc;;}
+
+.qty {
+  width: 50px; height: 50px; 
+  border-style: none;
+  border: 1px solid balck;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 19px;
+}
+
+.qty-container {
+  width: 100px; height: 50px;
+  display: grid;
+  justify-items: center; align-items: center;
+}
 
 #cart, #buy {
   width: 100px; height: 40px;
   color: white;
-  background-color: green;
   border-style: none;
-  border-radius: 5px;
+  border: 2px solid green;
+  border-radius: 15px;
 }
 
-
+#cart { border 2px solid orange;
 
 @media only screen and (max-width: 599px) {
   .first-row { display: block; width: 100vw; }
@@ -68,8 +87,13 @@
   #cart, #buy {
    margin-top: 15px;
    display: block;
-   font-size: 17px;
-   width: 100%; height: 65px;
+   font-size: 19px;
+   width: 100%; height: 60px;
+  }
+
+  .price-qty {
+    display: flex; justify-content: space-between;
+    width: 80vw;
   }
   
   .description-heading {font-size: 17px;}
