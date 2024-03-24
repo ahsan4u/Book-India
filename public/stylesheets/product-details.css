@@ -38,7 +38,7 @@
 }
 
 #new-price {
-  font-size: 25px;
+  font-size: 26px;
 }
 
 .plus,.minus {
@@ -50,13 +50,13 @@
 }
 .minus{
   background-color: #ffcccc;
-  padding: 3px 10px;
+  padding: 3px 11px;
 }
 
 .qty {
   width: 50px; height: 40px; 
   border-style: none;
-  border: 1px solid balck;
+  border: 1px solid black;
   border-radius: 10px;
   text-align: center;
   font-size: 19px;
@@ -75,7 +75,10 @@
   border-radius: 15px;
 }
 
-#cart { background-color: #ffcc99; }
+#cart {
+  border: 1px solid black;
+  background-color: white;
+}
 
 @media only screen and (max-width: 599px) {
   .first-row { display: block; width: 100vw; }
@@ -95,12 +98,13 @@
    display: block;
    margin: 15px auto;
    font-size: 19px;
-   width: 82%; height: 50px;
+   width: 90%; height: 50px;
   }
 
   .price-qty {
-    display: flex; justify-content: space-between;
+    display: flex; justify-content: space-around;
     width: 80vw;
+    margin: 10px 0;
   }
   
   .description-heading {font-size: 17px;}
