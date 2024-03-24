@@ -43,7 +43,7 @@
 
 .plus,.minus {
   display: inline-block;
-  margin: 8px 0;
+  margin: 6px 0;
   font-size: 19px;
   padding: 3px 8px; background-color: lightgreen;
   border: 1px solid balck; border-radius: 3px;
@@ -51,7 +51,7 @@
 .minus{background-color: #ffcccc;}
 
 .qty {
-  width: 50px; height: 50px; 
+  width: 40px; height: 50px; 
   border-style: none;
   border: 1px solid balck;
   border-radius: 10px;
@@ -67,7 +67,7 @@
 
 #cart, #buy {
   width: 100px; height: 40px;
-  background-color: green;
+  background-color: lightgreen;
   border-style: none;
   border-radius: 15px;
 }
@@ -92,9 +92,10 @@
   .name-heading {font-size: 19px;}
   
   #cart, #buy {
+   display: block;
    margin-top: 15px;
    font-size: 19px;
-   width: 40%; height: 40px;
+   width: 70%; height: 50px;
   }
 
   .price-qty {
