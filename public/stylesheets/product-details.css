@@ -43,7 +43,7 @@ product-details {
 
 .plus,.minus {
   display: inline-block;
-  margin-top: 5px;
+  margin: 5px 0;
   font-size: 19px;
   padding: 3px 8px; background-color: lightgreen;
   border: 1px solid balck; border-radius: 3px;
@@ -72,7 +72,7 @@ product-details {
 }
 
 #cart {
-  color: white; background-color: #ffcc99;
+  background-color: #ffcc99;
   border: 2px solid orange;
   border-radius: 15px;
 }
