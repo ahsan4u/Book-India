@@ -21,9 +21,7 @@
           <h1 class="name-heading">{{book.name}}</h1>
           
           <div class="product-details">
-           {{#if book.publishedDate}}<p>Released: {{book.publishedDate}}</p>{{/if}}
-           {{#if book.auther}}<p>By: {{book.auther}} <small> (Auther)</small></p>{{/if}}
-           {{#if book.publisher}}<p class="publisher">Publisher: <span>{{book.publisher}}</span></p>{{/if}}
+           {{#if book.auther}}<p class="by">By: {{book.auther}} <small> (Auther)</small></p>{{/if}}
           </div>
 
           <div class="price-qty">
@@ -33,9 +31,9 @@
               <input type="number" name="qty" value="1" class="qty" disabled>
               <span class="plus">+</span>
             </div>
-          </div> <!-- buy-container --> 
+          </div>
           
-          <p id="price-before">M.R.P.: {{book.price}}</span></p>
+          <p class="price-before">M.R.P.: {{book.price}}</span></p>
           
           <h2 class="description-heading">Book Description:</h2>
 
