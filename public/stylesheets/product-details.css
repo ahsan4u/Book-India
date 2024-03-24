@@ -16,7 +16,9 @@
   background-color: rgb(242, 242, 244);
   display: grid; align-items: center; justify-items: center;
 }
-
+@media only screen and (max-width: 599px) {
+  width: 100%;
+}
 .product-img {
   width: 85%;
   border-radius: 4px;
