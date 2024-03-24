@@ -18,10 +18,12 @@
 }
 @media only screen and (max-width: 599px) {
   .product-img-container {
-    width: 85vw;
+    width: 100%;
     height: 50vh;
   }
+  .first-row { display: block; }
 }
+
 .product-img {
   width: 85%;
   border-radius: 4px;
