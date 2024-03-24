@@ -27,16 +27,20 @@
 
 .off-msg { font-size: 11px; color: green; }
 
-.price-before { position: relative; color: red; }
+.price-before {
+  position: relative;
+  top: -4px;
+  color: red;
+}
 .price-before::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 40%;
+  width: 21%;
   height: 1px;
   background-color: red;
-  transform: rotate(45deg);
+  transform: rotate(10deg);
   transform-origin: 0 0;
 }
 
@@ -50,6 +54,7 @@
 
 .description-heading {
   font-size: 19px;
+  margin-top: 20px;
 }
 
 #new-price {
@@ -109,7 +114,9 @@
   
   .product-details-container {
     width: 93vw; margin: 20px auto;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: blue;
   }
   
   .name-heading {font-size: 19px;}
@@ -124,7 +131,7 @@
   .price-qty {
     display: flex; justify-content: space-around;
     width: 80vw;
-    margin: 10px 0; margin-bottom: 2px;
+    margin: 10px 0; margin-bottom: 0;
   }
   
   .description-heading {font-size: 17px;}
