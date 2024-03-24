@@ -7,13 +7,13 @@
   width: 85vw;
   margin: auto;
   border: 1px solid black;
+  display: flex; justify-content: center;
 }
 
 .product-img-container {
   width: 30vw;
   height: 70vh;
   border: 1px solid black;
-  margin-right: 10px;
   display: grid; align-items: center; justify-items: center;
 }
 
@@ -23,6 +23,5 @@
 }
 
 .product-details-container {
-  float: right;
   width: 45vw;
 }
