@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     {{>head}}
@@ -27,7 +27,7 @@
           </div>
 
           <div class="price-qty">
-            <p id="new-price">₹{{book.price}}</p>
+            <p id="new-price">₹{{book.price}} <span class="off-msg">20% off</span></p>
             <div class="qty-container">
               <span class="minus">-</span>
               <input type="number" name="qty" value="1" class="qty" disabled>
@@ -35,7 +35,7 @@
             </div>
           </div> <!-- buy-container --> 
           
-          <p id="price-before">Save: ₹340 <span>(40%) M.R.P.: {{book.price}}</span></p>
+          <p id="price-before">M.R.P.: {{book.price}}</span></p>
           
           <h2 class="description-heading">Book Description:</h2>
 
