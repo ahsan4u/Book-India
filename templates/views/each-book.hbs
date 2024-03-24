@@ -27,19 +27,17 @@
 
           <div class="price-container">
             <p id="new-price">₹{{book.price}}</p>
-            <p id="price-before">Save: ₹340 <span>(40%) M.R.P.: {{book.price}}</span></p>
           </div>
 
           <div class="buy-container">
-            <label for="qty">Qty: </label>
-            <select name="qty" id="qty">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-            </select>
+            <div class="qty-container">
+                <span class="-">-</span>
+                <input type="number" name="qty" value="1" class="qty" disabled>
+                <span class="+">+</span>
+            </div>
+              
+            <p id="price-before">Save: ₹340 <span>(40%) M.R.P.: {{book.price}}</span></p>
+              
             {{#if user}}
              <input id="cart" onclick="addToCart('{{book._id}}');" type="submit" value="add to cart">
              <input id="buy" type="button" value="Buy Now">
