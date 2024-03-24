@@ -25,7 +25,7 @@
   width: 50vw;
 }
 
-product-details {
+.product-details {
   margin: 15px 0;
 }
 
@@ -43,7 +43,7 @@ product-details {
 
 .plus,.minus {
   display: inline-block;
-  margin: 5px 0;
+  margin: 8px 0;
   font-size: 19px;
   padding: 3px 8px; background-color: lightgreen;
   border: 1px solid balck; border-radius: 3px;
@@ -69,12 +69,12 @@ product-details {
   width: 100px; height: 40px;
   background-color: green;
   border-style: none;
+  border-radius: 15px;
 }
 
 #cart {
   background-color: #ffcc99;
   border: 2px solid orange;
-  border-radius: 15px;
 }
 
 @media only screen and (max-width: 599px) {
@@ -93,9 +93,8 @@ product-details {
   
   #cart, #buy {
    margin-top: 15px;
-   display: block;
    font-size: 19px;
-   width: 100%; height: 60px;
+   width: 40%; height: 40px;
   }
 
   .price-qty {
