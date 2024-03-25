@@ -20,7 +20,7 @@
 .product-img {
   width: 85%;
   border-radius: 4px;
-  box-shadow: 0 0 4px gray;
+  box-shadow: 0 0 7px gray;
 }
 
 .product-details-container {
@@ -63,6 +63,7 @@
 
 #new-price {
   font-size: 28px;
+  margin-left: 10px;
 }
 
 .off-msg {
@@ -135,8 +136,8 @@
   }
 
   .price-qty {
-    display: flex; justify-content: space-around;
-    width: 90vw;
+    display: flex; justify-content: space-between;
+    width: 80vw;
     margin: 13px 0; margin-bottom: 0;
   }
   
