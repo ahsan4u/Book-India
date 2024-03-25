@@ -56,12 +56,13 @@
     {{>navbarScrollEffect}}   
     <script src="/scripts/index.js"></script>
     <script>
+     let qtyVal = document.querySelector('.qty');
      function plus() {
-      document.querySelector('.qty').value += 1;
+      Number(qtyVal.value) += 1;
      }
      function minus() {
-      if(document.querySelector('.qty').value >=1) {
-        document.querySelector('.qty').value -= 1;
+      if(Number(qtyVal.value) >=1) {
+        Number(qtyVal.value) -= 1;
       }
      }
         function addToCart(bookId) {
