@@ -43,7 +43,7 @@
   height: 1px;
   background-color: red;
   transform-origin: 0 0;
-  transform: translateY(5px);
+  transform: translateY(7px);
 }
 
 .product-details {
