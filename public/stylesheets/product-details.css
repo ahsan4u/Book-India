@@ -32,6 +32,7 @@
   position: relative;
   top: -4px;
   color: red;
+  opacity: 0.7;
 }
 .price-before::before {
   content: "";
@@ -41,9 +42,7 @@
   width: 19%;
   height: 1px;
   background-color: red;
-  transform: rotate(10deg);
-  transform-origin: 0 0;
-  opacity: 0.7;
+  transform-origin: 0 3px;
 }
 
 .product-details {
