@@ -42,7 +42,8 @@
   width: 19%;
   height: 1px;
   background-color: red;
-  transform-origin: 0 3px;
+  transform-origin: 0 0;
+  translateY(5px);
 }
 
 .product-details {
