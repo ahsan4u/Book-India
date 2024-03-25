@@ -58,11 +58,11 @@
     <script>
      let qtyVal = document.querySelector('.qty');
      function plus() {
-      Number(qtyVal.value) += 1;
+      qtyVal.value = Number(qtyVal.value) + 1;
      }
      function minus() {
       if(Number(qtyVal.value) >=1) {
-        Number(qtyVal.value) -= 1;
+       qtyVal.value = Number(qtyVal.value) - 1;
       }
      }
         function addToCart(bookId) {
