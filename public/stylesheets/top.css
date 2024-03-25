@@ -172,9 +172,9 @@ a[href='/add-book']:hover {
 }
 
 .footer-img {
-  width: 100vw; height: 80px;
-  background-image: url("../img-controller/icons/footer.png");
-  background-size: 100% 100%;
+  width: 100vw; height: 150px;
+  background: linear-gradient(to left, rgb(104, 34, 127), rgb(103, 31, 127));
+  color: white;
 }
 
 @media only screen and (max-width: 599px) {
