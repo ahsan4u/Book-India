@@ -69,14 +69,13 @@
 
 .plus,.minus {
   display: inline-block;
-  margin: 6px 0;
+  margin: 2px 0;
   font-size: 19px;
-  padding: 3px 8px; background-color: lightgreen;
+  padding: 4px 11px; background-color: lightgreen;
   border: 1px solid balck; border-radius: 3px;
 }
 .minus{
   background-color: #ffcccc;
-  padding: 3px 11px;
 }
 
 .qty {
