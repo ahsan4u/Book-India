@@ -58,7 +58,9 @@
     <script>
      let qtyVal = document.querySelector('.qty');
      function plus() {
-      qtyVal.value = Number(qtyVal.value) + 1;
+      if(Number(qtyVal.value) <= 5) {
+        qtyVal.value = Number(qtyVal.value) + 1;
+      }
      }
      function minus() {
       if(Number(qtyVal.value) >=1) {
