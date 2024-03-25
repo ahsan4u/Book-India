@@ -56,6 +56,14 @@
     {{>navbarScrollEffect}}   
     <script src="/scripts/index.js"></script>
     <script>
+     function plus() {
+      document.querySelector('.qty').value += 1;
+     }
+     function minus() {
+      if(document.querySelector('.qty').value >=1) {
+        document.querySelector('.qty').value -= 1;
+      }
+     }
         function addToCart(bookId) {
           fetch(`/add-to-cart/${bookId}`,
            {
