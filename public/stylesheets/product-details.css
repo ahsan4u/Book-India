@@ -60,7 +60,7 @@
 }
 
 #new-price {
-  font-size: 27px;
+  font-size: 28px;
 }
 
 .off-msg {
@@ -95,7 +95,8 @@
 
 #cart, #buy {
   width: 100px; height: 40px;
-  background-color: lightgreen;
+  color: white;
+  background-color: blue;
   border-style: none;
   border-radius: 15px;
 }
