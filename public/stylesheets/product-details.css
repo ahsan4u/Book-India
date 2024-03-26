@@ -112,9 +112,9 @@
   background-color: white;
 }
 .cart-buy-container {
-  width: 100vw;
+  width: 99vw;
   margin: 25px 0;
-  position: absolute; left: -12px;
+  position: relative; left: -10px;
   border-bottom: 5px solid lightgray;
 }
 
