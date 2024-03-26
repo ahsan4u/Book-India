@@ -24,7 +24,7 @@
 }
 
 .product-details-container {
-  width: 50vw;
+  width: 50vw; mar
 }
 
 .name-heading {
@@ -102,7 +102,7 @@
 }
 
 #cart, #buy {
-  margin: 10px 20px;
+  margin: 20px 10px;
   margin-top: 0;
   width: 100px; height: 40px;
   border-style: none;
@@ -112,10 +112,9 @@
   background-color: white;
 }
 .cart-buy-container {
-  width: 98vw;
+  width: 100%;
   margin-top: 15px;
   margin-bottom: 25px
-  position: relative; left: -8px;
   border-bottom: 5px solid lightgray;
 }
 
@@ -130,7 +129,7 @@
 
 .description {
   margin-top: 3px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   border-bottom: 5px solid lightgray;
 }
 
