@@ -38,14 +38,15 @@
           <h2 class="description-heading">Book Description:</h2>
 
           <div class="description">{{book.description}}</div>   
-          
-          {{#if user}}
-            <input id="cart" onclick="addToCart('{{book._id}}');" type="submit" value="add to cart">
-            <input id="buy" type="button" value="Buy Now">
-          {{else}}
-            <a href="/sign-in-up"><input id="cart" type="button" value="Add To Cart"></a>
-            <input id="buy" type="button" value="Buy Now">
-          {{/if}}
+           <div class="cart-buy-container">  
+            {{#if user}}
+              <input id="cart" onclick="addToCart('{{book._id}}');" type="submit" value="add to cart">
+              <input id="buy" type="button" value="Buy Now">
+            {{else}}
+              <a href="/sign-in-up"><input id="cart" type="button" value="Add To Cart"></a>
+              <input id="buy" type="button" value="Buy Now">
+            {{/if}}
+           </div> <!-- cart-buy-container -->
       </div> <!-- product-details-container -->
     </div> <!-- first row -->
    
