@@ -140,16 +140,16 @@
   
   #cart, #buy {
    font-size: 17px;
+    margin: 10px 0;
    width: 40%; height: 40px;
   }
 
   .cart-buy-container {
     width: 100vw;
-    padding: 7px 0;
     position: fixed; bottom: 0;
     display: flex;
     justify-content: center;
-    gap: 15%;
+    gap: 30px;
   }
 
   .price-qty {
