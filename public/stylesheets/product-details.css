@@ -140,16 +140,14 @@
   
   #cart, #buy {
    font-size: 17px;
-    margin: 10px 0;
-   width: 40%; height: 50px;
+   width: 35%; height: 50px;
   }
 
   .cart-buy-container {
-    width: 100vw; height: 70px;
+    width: 100vw;
     background-color: white;
     position: fixed; bottom: 0;
     display: flex;
-    justify-content: center;
     gap: 15px;
   }
 
