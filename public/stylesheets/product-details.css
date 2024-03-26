@@ -124,6 +124,7 @@
   color: orange;
   border: 1px solid orange;
   background-color: white;
+  flex-shrink: 0;
 }
 
 .description { margin-top: 3px; margin-bottom: 10px; }
