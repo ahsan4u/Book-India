@@ -24,7 +24,7 @@
 }
 
 .product-details-container {
-  width: 50vw; mar
+  width: 50vw;
 }
 
 .name-heading {
@@ -114,7 +114,7 @@
 .cart-buy-container {
   width: 100%;
   margin-top: 15px;
-  margin-bottom: 25px
+  margin-bottom: 25px;
   border-bottom: 5px solid lightgray;
 }
 
@@ -128,8 +128,7 @@
 .description-heading { font-size: 19px; margin-top: 20px; }
 
 .description {
-  margin-top: 3px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   border-bottom: 5px solid lightgray;
 }
 
@@ -142,7 +141,7 @@
   .product-img { width: 70%; }
   
   .product-details-container {
-    width: 93vw; margin: 20px auto;
+    width: 93%; margin: 20px auto;
     margin-bottom: 5px;
     font-size: 13px;
   }
@@ -156,7 +155,7 @@
 
   .price-qty {
     display: flex; justify-content: space-between;
-    width: 80vw;
+    width: 80%;
   }
   
   .description-heading {font-size: 17px;}
