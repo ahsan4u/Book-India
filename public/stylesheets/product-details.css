@@ -108,24 +108,25 @@
 
 #cart, #buy {
   width: 100px; height: 40px;
-  color: white;
-  background-color: blue;
   border-style: none;
   border-radius: 15px;
+  color: orange;
+  border: 1px solid orange;
+  background-color: white;
 }
 .cart-buy-container {
     width: 100%;
     margin: 20px 0;
-    display: flex;
-    justify-content: space-around;
+    border-top: 5px solid lightgray;
+    border-bottom: 5px solid lightgray;
 }
 
-#cart {
-  color: orange;
-  border: 1px solid orange;
-  background-color: white;
-  flex-shrink: 0;
+#buy {
+  float: right;
+  color: white;
+  background-color: blue;
 }
+
 
 .description { margin-top: 3px; margin-bottom: 10px; }
 
