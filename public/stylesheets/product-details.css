@@ -146,9 +146,8 @@
   .cart-buy-container {
     width: 100vw;
     background-color: white;
-    position: fixed; bottom: 0;
+    position: fixed; bottom: 0; left: 0;
     display: flex;
-    gap: 15px;
   }
 
   .price-qty {
