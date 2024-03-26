@@ -12,7 +12,7 @@
 
 .product-img-container {
   width: 30vw;
-  height: 70vh;
+  height: 700px;
   background-color: rgb(242, 242, 244);
   display: grid; align-items: center; justify-items: center;
 }
@@ -144,7 +144,7 @@
   }
 
   .cart-buy-container {
-    width: 100vw;
+    width: 100vw; height: 60px;
     background-color: white;
     position: fixed; bottom: 0; left: 0;
   }
