@@ -101,11 +101,6 @@
   width: 80vw;
 }
 
-.description-heading {
-  font-size: 19px;
-  margin-top: 20px;
-}
-
 #cart, #buy {
   margin: 10px 20px;
   margin-top: 0;
@@ -119,7 +114,7 @@
 .cart-buy-container {
   width: 100vw;
   margin: 25px 0;
-  position: relative; left: -15px;
+  position: absolute; left: -12px;
   border-bottom: 5px solid lightgray;
 }
 
@@ -130,8 +125,12 @@
   background-color: blue;
 }
 
+.description-heading { font-size: 19px; margin-top: 20px; }
 
-.description { margin-top: 3px; margin-bottom: 10px; }
+.description {
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
 
 @media only screen and (max-width: 599px) {
   .first-row { display: block; width: 100vw; }
