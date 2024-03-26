@@ -48,7 +48,30 @@
           {{/if}}
       </div> <!-- product-details-container -->
     </div> <!-- first row -->
-      
+   
+    <div class= "second-row">
+     <div class="middleware">
+        {{!-- Books with the same Auther --}}
+        <a class="see-more-btn" href="/books">See More...</a>   
+        <h2 id="categorie-heading">Books With the same Auther</h2>
+        <img src="/img-controller/icons/right-arrow.png" alt=">" class="right-arrow">
+        <img src="/img-controller/icons/left-arrow.png" alt="<" class="left-arrow">
+    
+        <div class="scroll">
+            {{#each sameAuther}}
+                <div class="item">
+                    <a id="bookLink" href="/books/{{_id}}">
+                        <img id="book" src="/books/{{image}}" alt="{{image}}"><br>
+                        {{!-- <div class="deal-msg"><small>Up to 59% off</small></div><br> --}}
+                        <span id="auther">{{auther}} <span style="color:lightgray"> auther</span></span><br>
+                        <span id="price">{{price}}₹</span>
+                        <span id="book-name">{{name}}</span>
+                    </a>
+                </div> <!-- item -->
+            {{/each}}
+        </div> <!-- scroll -->
+     </div> <!-- middleware -->
+    </div> <!-- second row -->
   </div> <!-- items-container -->
 
   <!-- {{>footer}} -->
