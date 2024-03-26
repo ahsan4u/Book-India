@@ -115,13 +115,15 @@
   background-color: white;
 }
 .cart-buy-container {
-    width: 100%;
-    margin: 20px 0;
-    border-top: 5px solid lightgray;
-    border-bottom: 5px solid lightgray;
+  width: 100vw;
+  position: relative; left: 0;
+  margin: 20px 0;
+  border-top: 5px solid lightgray;
+  border-bottom: 5px solid lightgray;
 }
 
 #buy {
+  border: none;
   float: right;
   color: white;
   background-color: blue;
