@@ -102,7 +102,6 @@
 }
 
 #cart, #buy {
-  margin-bottom: 15px;
   width: 100px; height: 40px;
   border-style: none;
   border-radius: 15px;
@@ -113,7 +112,7 @@
 .cart-buy-container {
   width: 100%;
   margin-top: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   margin-bottom: 10px;
   border-bottom: 3px solid lightgray;
 }
