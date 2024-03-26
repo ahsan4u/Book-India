@@ -97,8 +97,8 @@
 }
 
 .price-qty {
-    display: flex; justify-content: space-between;
-    width: 80vw;
+  display: flex; justify-content: space-between;
+  width: 80vw;
 }
 
 .description-heading {
@@ -116,7 +116,7 @@
 }
 .cart-buy-container {
   width: 100vw;
-  position: relative; left: 0;
+  position: relative; left: -10px;
   margin: 20px 0;
   border-top: 5px solid lightgray;
   border-bottom: 5px solid lightgray;
