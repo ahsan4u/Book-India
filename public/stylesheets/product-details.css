@@ -139,10 +139,17 @@
   .name-heading {font-size: 19px;}
   
   #cart, #buy {
-   display: block;
-   margin: 20px auto;
-   font-size: 19px;
-   width: 90%; height: 50px;
+   font-size: 17px;
+   width: 35%; height: 30px;
+  }
+
+  .cart-buy-container {
+    width: 100vw;
+    padding: 7px 0;
+    position: fixed; bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
 
   .price-qty {
