@@ -37,7 +37,7 @@
 
 .product-details {
   margin: 3px 0;
-  margin-bottom: 23px;
+  margin-bottom: 15px;
 }
 
 #new-price {
@@ -112,9 +112,10 @@
   background-color: white;
 }
 .cart-buy-container {
-  width: 99vw;
-  margin: 25px 0;
-  position: relative; left: -10px;
+  width: 98vw;
+  margin-top: 15px;
+  margin-bottom: 25px
+  position: relative; left: -8px;
   border-bottom: 5px solid lightgray;
 }
 
@@ -129,7 +130,8 @@
 
 .description {
   margin-top: 3px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid lightgray;
 }
 
 @media only screen and (max-width: 599px) {
@@ -156,7 +158,6 @@
   .price-qty {
     display: flex; justify-content: space-between;
     width: 80vw;
-    margin: 13px 0; margin-bottom: 0;
   }
   
   .description-heading {font-size: 17px;}
