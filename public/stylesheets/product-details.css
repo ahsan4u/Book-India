@@ -146,6 +146,7 @@
 
   .cart-buy-container {
     width: 100vw;
+    background-color: white;
     position: fixed; bottom: 0;
     display: flex;
     justify-content: center;
