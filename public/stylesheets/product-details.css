@@ -112,7 +112,8 @@
 }
 .cart-buy-container {
   width: 100%;
-  margin: 15px 0;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 #buy {
@@ -123,7 +124,7 @@
 }
 
 .description-container {
-  margin-bottom: 30px;
+  margin: 15px 0;
   padding: 10px 6px;
 }
 
