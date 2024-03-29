@@ -140,7 +140,7 @@
     width: 100%;
     height: 50vh;
   }
-  .product-img { width: 70%; }
+  .product-img { width: 70vh; }
   
   .product-details-container {
     width: 93%; margin: 20px auto;
