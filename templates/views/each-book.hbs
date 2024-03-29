@@ -33,6 +33,11 @@
           </div>
           
           <p class="price-before">M.R.P.: {{book.price}}</p>
+
+          <div class="description-container">
+            <h2 class="description-heading">Book Description:</h2>
+            <div class="description">{{book.description}}</div>  
+          </div> <!-- description-container -->
           
           <div class="cart-buy-container">  
             {{#if user}}
@@ -43,12 +48,6 @@
               <input id="buy" type="button" value="Buy Now">
             {{/if}}
           </div> <!-- cart-buy-container -->
-       
-          <div class="description-container">
-            <h2 class="description-heading">Book Description:</h2>
-            <div class="description">{{book.description}}</div>  
-          </div> <!-- description-container -->
-           
       </div> <!-- product-details-container -->
     </div> <!-- first row -->
    
