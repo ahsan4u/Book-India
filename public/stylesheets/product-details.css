@@ -3,6 +3,7 @@
   padding: 0;
   font-family: "Convergence", sans-serif;
 }
+#site-name { font-family: "Merriweather", serif; }
 
 .first-row {
   width: 85vw;
@@ -70,6 +71,12 @@
   transform: translateY(7px);
 }
 
+.qty-container {
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .plus,.minus {
   display: inline-block;
   margin: 2px 0;
@@ -90,15 +97,9 @@
   font-size: 19px;
 }
 
-.qty-container {
-  width: 130px;
-  display: flex;
-  justify-content: space-between;
-}
-
 .price-qty {
   display: flex; justify-content: space-between;
-  width: 90%;
+  width: 100%;
 }
 
 #cart, #buy {
@@ -155,7 +156,7 @@
 
   .price-qty {
     display: flex; justify-content: space-between;
-    width: 80%;
+    width: 95%;
   }
 
   .description-container {
