@@ -42,7 +42,7 @@
 
 #new-price {
   font-size: 28px;
-  margin-left: 10px;
+  margin-left: 20px;
   color: blue;
 }
 
@@ -98,7 +98,7 @@
 
 .price-qty {
   display: flex; justify-content: space-between;
-  width: 80%;
+  width: 90%;
 }
 
 #cart, #buy {
@@ -123,7 +123,7 @@
 
 .description-container {
   margin-bottom: 30px;
-  padding: 10px 3px;
+  padding: 10px 6px;
 }
 
 .description-heading { font-size: 19px; margin-bottom: 5px;}
