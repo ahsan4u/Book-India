@@ -177,7 +177,10 @@ a[href='/add-book']:hover {
   color: white;
 }
 
-.website-logo { margin: 15px auto; }
+.website-logo {
+  margin-top: 15px;
+  display: flex; justify-content: center;
+}
 
 @media only screen and (max-width: 599px) {
   .logo-img { width: 30px }
