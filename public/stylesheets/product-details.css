@@ -138,9 +138,9 @@
   .first-row { display: block; width: 100vw; }
   .product-img-container {
     width: 100%;
-    height: 50vh;
+    height: 60vh;
   }
-  .product-img { width: 70vh; }
+  .product-img { width: 70%; }
   
   .product-details-container {
     width: 93%; margin: 20px auto;
