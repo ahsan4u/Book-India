@@ -126,6 +126,8 @@
 .description-container {
   margin: 15px 0;
   padding: 10px 6px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
 }
 
 .description-heading { font-size: 19px; margin-bottom: 5px;}
@@ -158,11 +160,6 @@
   .price-qty {
     display: flex; justify-content: space-between;
     width: 95%;
-  }
-
-  .description-container {
-    border: 1px solid lightgray;
-    border-radius: 10px;
   }
   
   .description-heading {font-size: 17px;}
