@@ -2,6 +2,10 @@
 
 a { text-decoration: none;  color: black; }
 
+.item {
+  margin-bottom: 10px;
+}
+
 .items-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
