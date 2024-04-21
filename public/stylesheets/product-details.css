@@ -8,7 +8,7 @@
 .first-row {
   width: 85vw;
   margin: auto;
-  display: flex; justify-content: space-between;
+  gap: 20px;
 }
 
 .product-img-container {
