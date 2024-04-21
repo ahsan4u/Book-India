@@ -136,6 +136,12 @@
   
 }
 
+@media only screen and (max-width: 899px) {
+   .product-img-container {
+    height: 35vh;
+   }
+}
+
 @media only screen and (max-width: 599px) {
   .first-row { display: block; width: 100vw; }
   .product-img-container {
