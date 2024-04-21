@@ -13,7 +13,7 @@
 
 .product-img-container {
   width: 30vw;
-  height: 80vh;
+  height: 100%;
   background-color: rgb(242, 242, 244);
   display: grid; align-items: center; justify-items: center;
 }
