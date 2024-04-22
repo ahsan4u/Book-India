@@ -114,12 +114,14 @@
 }
 .cart-buy-container {
   width: 100%;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
   margin: 15px 0;
 }
 
 #buy {
   border: none;
-  float: right;
   color: white;
   background-color: blue;
 }
@@ -156,6 +158,11 @@
   #cart, #buy {
    font-size: 17px;
    width: 35%; height: 50px;
+  }
+
+  .cart-buy-container {
+   gap: 0;
+   justify-content: space-between;
   }
 
   .price-qty {
