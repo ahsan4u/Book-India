@@ -9,12 +9,12 @@
   width: 85vw;
   margin: auto;
   display: flex;
-  gap: 10%;
+  gap: 6%;
 }
 
 .product-img-container {
   flex-grow: 1;
-  width: 30vw;
+  width: 35vw;
   background-color: rgb(242, 242, 244);
   display: grid; align-items: center; justify-items: center;
 }
@@ -27,6 +27,7 @@
 
 .product-details-container {
   width: 50vw;
+  margin-top: 20px;
 }
 
 .name-heading {
@@ -113,8 +114,7 @@
 }
 .cart-buy-container {
   width: 100%;
-  margin-top: 15px;
-  margin-bottom: 30px;
+  margin: 15px 0;
 }
 
 #buy {
