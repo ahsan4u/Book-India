@@ -8,15 +8,21 @@ a { text-decoration: none;  color: black; }
 
 .items-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   place-items: center;
   width: 100vw;
   margin: 10p 0;
 }
 
+@media only screen and (min-width: 599px) and (max-width: 1000px) {
+  .items-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
 @media only screen and (max-width: 599px) {
   .items-container {
-     grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

@@ -104,11 +104,15 @@ a {
   width: 0;
 }
 
+@media only screen and (max-width: 1000px) {
+  .advertisment { height: 500px; }
+}
+
 @media only screen and (max-width: 599px) {
   /* Android-specific styles here */
-  .advertisment {
-    height: 200px;
-  }
+  
+  .advertisment { height: 200px; }
+
   .circle-container{
     margin: 10px auto; width: 90vw;
   }

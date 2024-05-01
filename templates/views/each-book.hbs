@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     {{>head}}
-    
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/stylesheets/other.css">
     <link rel="stylesheet" href="/stylesheets/book.css">
 
@@ -30,15 +33,32 @@
               <input type="number" name="qty" value="1" class="qty" disabled>
               <span class="plus" onclick="plus()">+</span>
             </div>
-          </div>
+          </div> <!-- price-qty -->
           
-          <p class="price-before">M.R.P.: {{book.price}}</p>
+          <p class="price-before">M.R.P.: {{book.price}}</p> <!-- price-before -->
+
+          <div class="quality">
+            <div>
+              <i class="fa-solid fa-heart"></i>
+              <p>quality Checked</p>
+            </div>
+
+            <div>
+              <i class="fab fa-linkedin-in"></i>
+              <p>Easy Return</p>
+            </div>
+
+            <div class="quality-check">
+              <i class="fab fa-linkedin-in"></i>
+              <p>COD Available</p>
+            </div>
+          </div> <!-- quality -->
 
           <div class="description-container">
             <h2 class="description-heading">Book Description:</h2>
             <div class="description">{{book.description}}</div>  
           </div> <!-- description-container -->
-          
+
           <div class="cart-buy-container">  
             {{#if user}}
               <input id="cart" onclick="addToCart('{{book._id}}');" type="submit" value="add to cart">
