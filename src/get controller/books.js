@@ -52,7 +52,7 @@ const eachBook = async (req, res)=> {
     
     const sameAuther = await Books.find({ auther: book.auther, _id: { $ne: bookId } }).limit(10);
 
-    res.render('each-book', { book, sameAuther });
+    res.render('product-details', { book, sameAuther });
 }
 
 const textBooks = (req, res)=> {
