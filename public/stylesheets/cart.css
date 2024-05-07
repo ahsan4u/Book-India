@@ -6,20 +6,115 @@ body {
 .navbar{ background-color: white; }
 
 .each-cart {
-    background-color: white;
-    width: 50vw;
-    border-radius: 20px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    background-color: #ebeffd93;
+    max-width: 750px;
     margin: 20px auto; padding: 10px 20px;
-    display: flex; gap: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    display: flex; justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
     
 }
 
 #cart-book-img {
-    width: 70px; 
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.35);
+    width: 50px; 
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
 }
 
 .each-cart .about-cart p {
-    line-height: 30px;  
+    /* margin: 10px 0; */
+    line-height: 22px;
+    font-family: "Convergence", sans-serif;
+}
+
+.each-cart .about-cart p span {
+    color: blue;
+    font-family: "Convergence", sans-serif;
+}
+
+.each-cart .about-cart {
+    height: 100%;
+}
+
+.left {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.qty-container {
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.plus,.minus {
+    display: flex;
+    justify-content: center; align-items: center;
+    margin: 2px 0;
+    font-size: 19px;
+    cursor: pointer; user-select: none;
+    width: 30px; height: 30px;
+    background-color: lightgreen;
+    border: 1px solid balck; border-radius: 3px;
+    font-family: "Convergence", sans-serif;
+}
+.minus{
+    background-color: #ffcccc;
+    padding-bottom: 2px;
+  }
+  
+  .plus:active {
+    background-color: rgb(38, 192, 38);
+}
+.minus:active {
+    background-color: #fa9393;
+}
+.qty {
+    width: 40px; height: 32px; 
+    border-style: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 19px;
+  }
+
+.deleteBtn {
+    width: 20px;
+}
+
+.total input {
+    font-family: "Convergence", sans-serif;
+    display: block;
+    height: 40px;
+    font-size: 17px;
+    width: 120px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: blue;
+}
+
+.total {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    max-width: 750px;
+    margin: 20px auto; padding: 10px 20px;
+    display: flex; justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.total p span {
+    color: rgb(238, 65, 2);
+    font-family: "Convergence", sans-serif;
+}
+.total p {font-family: "Convergence", sans-serif;}
+
+@media only screen and (max-width: 599px) {
+    .each-cart .about-cart p {
+        font-size: 13px;
+        margin: 3px 0;
+    }
 }

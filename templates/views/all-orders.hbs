@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+    <style> a[href = "/about"] { color: blue; }</style>
+    <link rel="stylesheet" href="/stylesheets/all-orders.css">
+</head>
+<body>
+    {{>top}}
+
+    <div class="items-container">
+        {{#if allOrders}}
+        {{#each allOrders}}
+        <div class="each-user-container">
+            <div class="left-part">
+                <div class="img">
+                    <img src="/books/{{book.image}}" alt="{{book.image}}">
+                </div>
+                <p><span>{{book.name}}</span></p>
+                <p>Order quantity:<span> {{qty}}</span></p>
+                <p>Total Amount:<span> {{amount}}₹</span></p>
+            </div>
+
+            <div class="right-part">
+                <h1>User Details</h1>
+                <p>Name: <span>{{userAddress.fullname}}</span></p>
+                <p>Mobile No.: <span>{{userAddress.mobile}}</span></p>
+                <p>Alternate Mobile No.: <span>{{userAddress.mobileAlt}}</span></p>
+                <p>House/Building Name: <span>{{userAddress.houseOrBuildingName}}</span></p>
+                <p>Road Name: <span>{{userAddress.roadName}}</span></p>
+                <p>Landmark: <span>{{userAddress.landmark}}</span></p>
+                <p>roadName: <span>{{userAddress.roadName}}</span></p>
+                <p>Pincode: <span>{{userAddress.pincode}}</span></p>
+                <p>District: <span>{{userAddress.district}}</span></p>
+                <p>State: <span>{{userAddress.state}}</span></p>
+                <p>Order Date: <span>{{time}}</span></p>
+                {{#if status}}
+                    <p>Status: <span style="color: green;">Item delivered</span></p>
+                {{else}}
+                    <p>Status: <span style="color: red;">Not delivered yet</span></p>
+                    <form action='/all-orders/update/{{_id}}' method="post">
+                        <input type="submit" value="Delivered">
+                    </form>
+                {{/if}}
+
+            </div>
+        </div> <!-- each-user-container -->
+        {{/each}}
+        {{else}}
+        <h1>There are no orders to deliver at the moment</h1>
+        {{/if}}
+    </div>
+
+    {{>navbarScrollEffect}}
+</body>
+</html>

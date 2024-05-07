@@ -12,19 +12,97 @@
         
         {{#if books}}{{#each books}}
         <div class="each-cart">
-            <div><img id="cart-book-img" src="/books/{{image}}" alt=""></div>
-            <div class="about-cart">
-                <p>{{name}}</p>
-                <p>{{auther}}</p>
-                <p>{{price}}</p>
+            <div class="left">
+                <img id="cart-book-img" src="/books/{{image}}" alt="">
+                <div class="about-cart">
+                    <p>Name: <span>{{name}}</span></p>
+                    <p>Price: <span>{{price}}</span></p>
+                </div>
+            </div>
+
+            <div class="qty-container">
+              <span class ="minus" onclick="minus('{{_id}}')">-</span>
+              <input type="number" name="qty" value="{{buyQty}}" class="qty" disabled>
+              <span class="plus" onclick="plus('{{_id}}')">+</span>
+            </div>
+
+            <div class="right">
+                <img class="deleteBtn" src="/img-controller/icons/delete.png" onclick="removeBook('{{_id}}')">
             </div>
         </div>
-        {{/each}}{{else}}
+        {{/each}}
+        <div class="total">
+          <p>Total: <span>{{totalPrice}}₹</span></p>
+          <p>Products: <span>{{itemCount}}</span></p>
+          <input type="button" onclick="buyPage()" value="Place Order">
+        </div>
+        {{else}}
             <h1 style="text-align: center; margin-top: 200px; color: red;">No Items Added in Your Cart List</h1>
         {{/if}}
 
     </div>
 
     {{>navbarScrollEffect}}
+    <script>
+      function buyPage() {
+        window.location.href=`/place-order/null/null`;
+      }
+
+      function removeBook(bookId) {
+        fetch(`/my-cart/remove/${bookId}`,
+        {
+          method: 'post',
+          headers: { 'Content-Type': `application/json` }
+        })
+        .then((respone)=> {
+          if(!respone.ok) { console.log('an error is occured'); }
+        }).then(()=> {
+          window.location.href='/my-cart';
+        })
+        .catch((error)=> {
+          alert('error in removing book');
+          console.log('script fetch ',error);
+        })
+      }
+
+      function minus(bookId) {
+        const qty = Number(document.querySelector('.qty').value);
+        if(qty<=1) {return;}
+        fetch(`/my-cart/minusQty/${bookId}`,
+        {
+          method: 'post',
+          headers: { 'Content-Type': `application/json` }
+        })
+        .then((respone)=> {
+          if(!respone.ok) { console.log('an error is occured'); }
+        }).then(()=> {
+          window.location.href='/my-cart';
+        })
+        .catch((error)=> {
+          alert('error in decreasing quantity');
+          console.log('script fetch ',error);
+        })
+      }
+
+      function plus(bookId) {
+        const qty = Number(document.querySelector('.qty').value);
+        if(qty>=6) {return;}
+        fetch(`/my-cart/plusQty/${bookId}`,
+        {
+          method: 'post',
+          headers: { 'Content-Type': `application/json` }
+        })
+        .then((respone)=> {
+          if(!respone.ok) { console.log('an error is occured'); }
+        }).then(()=> {
+          window.location.href='/my-cart';
+        })
+        .catch((error)=> {
+          alert('error in increasing quantity');
+          console.log('script fetch ',error);
+        })
+      }
+
+    </script>
 </body>
 </html>

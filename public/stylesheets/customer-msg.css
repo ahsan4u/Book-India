@@ -1,0 +1,45 @@
+body {
+    background-color: #c9d6ffb0;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff93);
+}
+
+.navbar{ background-color: white; }
+
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    place-items: center;
+}
+
+.items-container .each-msg {
+    max-width: 95%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+    padding-bottom: 2px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+.items-container .each-msg p {
+    font-family: "Convergence", sans-serif;
+    margin-bottom: 3px;
+    font-size: 18px;
+}
+
+.items-container .each-msg p:last-child {
+    border: 1px solid gray;
+    border-radius: 10px;
+    color: blue;
+    padding: 4px;
+}
+
+.items-container .each-msg p span {
+    font-family: "Convergence", sans-serif;
+    color: blue;
+}
+
+@media only screen and (max-width: 599px) {
+    .items-container { grid-template-columns: repeat(1, 1fr); }
+}

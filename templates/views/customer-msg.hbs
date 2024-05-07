@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+    <style> a[href = "/about"] { color: blue; }</style>
+    <link rel="stylesheet" href="/stylesheets/customer-msg.css">
+</head>
+<body>
+    {{>top}}
+
+    <div class="items-container">
+        {{#if allMsg}}
+        {{#each allMsg}}
+        <div class="each-msg">
+            <p>Name: <span>{{fullname}}</span></p>
+            <p>email: <span>{{email}}</span></p>
+            <p>Mob. No.: <span>{{phone}}</span></p>
+            <p>Date: <span>{{time}}</span></p>
+            <p>{{message}}</p>
+        </div>
+        {{/each}}
+        {{else}}
+        <h1>No any massage is </h1>
+        {{/if}}
+    </div>
+
+    {{>navbarScrollEffect}}
+</body>
+</html>

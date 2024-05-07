@@ -4,10 +4,9 @@
 }
 
 body {
-  background-color: #c9d6ff;
-  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-  height: 100vh;
   font-family: "Convergence", sans-serif;
+  background: linear-gradient(to bottom, #cdcdce, rgb(209, 207, 207));
+
 }
 
 .navbar{ background-color: white; }
@@ -15,27 +14,23 @@ body {
 #title {
   text-align: center;
   padding: 14px 0;
-  margin-bottom: 30px;
-  color: white;
-  background: linear-gradient(to right, rgb(147, 56, 177), rgb(103, 31, 127));
+  color: rgb(147, 56, 177);
 }
 
 .add {
   font-family: "Convergence", sans-serif;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-  width: 60vw;
-  padding-bottom: 30px;
+  max-width: 850px; min-width: 100px;
+  min-height: 100vh;
   margin: 0 auto;
   padding-bottom: 40px;
-  margin-top: 25px;
-  background-color: white;
-  border-radius: 70px;
-  overflow: hidden;
+  background-color: transparent;
+
 }
 
-.row {
-  display: flex;
-  justify-content: space-around;
+.all-inputs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center; align-items: center;
 }
 
 .post-input {
@@ -44,27 +39,19 @@ body {
   font-size: 13px;
   outline: none;
   border-radius: 8px;
-  width: 200px;
+  width: 90%;
   height: 40px;
   margin: 10px 0;
   padding-left: 10px;
   font-family: "Convergence", sans-serif;
 }
 
-
-#book-detail-field {
-  border: none;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-around;
-}
-
 #categories {
-  height: 38px; width: 205px;
+  height: 38px; width: 94%;
 }
 
 #file {
-  width: 170px;
+  width: 90%;
   height: 25px;
   border: none;
   margin: 5px;
@@ -72,7 +59,8 @@ body {
 }
 
 #description {
-  height: 41px;
+  margin: 10px 0;
+  height: 40px;
   padding-top: 2px;
   border: none;
   outline: none;
@@ -80,10 +68,9 @@ body {
 
 #file-field {
   overflow: hidden;
-  width: 210px;
+  width: 94%;
+  margin-top: -6px;
   height: 50px;
-  margin-top: 5px;
-  margin-left: -65px;
   font-size: 12px;
   border-radius: 8px;
   border: none;
@@ -91,12 +78,23 @@ body {
 }
 
 #submit {
-  margin-top: 12px;
   font-size: 18px;
-  height: 42px;
-  width: 210px;
+  height: 44px;
+  width: 98%;
+  display: block;
+  margin: 10px auto;
   background: rgb(103, 31, 127);
   border-style: none;
   border-radius: 15px;
   color: white;
+}
+
+@media only screen and (max-width: 599px) {
+  .all-inputs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  #file-field {
+    margin: 10px 0;
+  }
 }

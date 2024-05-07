@@ -1,0 +1,121 @@
+body {
+  background-color: #c9d6ffb0;
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff93);
+}
+
+.navbar {
+  background-color: white;
+}
+
+.items-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  place-items: center;
+}
+
+.each-user-container {
+  background-color: white;
+  max-width: 95%;
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.each-user-container .left-part .img img {
+  width: 80%;
+  margin: 20px 0;
+  box-shadow: 2px 2px 5px gray;
+}
+
+.each-user-container .left-part .img {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to left, #a2e5f1, #13172593);
+}
+
+.each-user-container .left-part {
+  width: 35%;
+  border-right: 1px solid rgb(182, 181, 181);
+}
+
+.each-user-container .left-part p {
+  font-family: "Convergence", sans-serif;
+  text-align: center;
+  margin: 3px 0;
+}
+
+.each-user-container .right-part {
+  width: 65%;
+}
+
+.right-part form input:hover {
+  background-color: rgb(3, 150, 118);
+}
+.right-part form input:active {
+  box-shadow: none;
+}
+
+.each-user-container .right-part p {
+  font-family: "Convergence", sans-serif;
+  margin-top: 3px;
+  margin-left: 20px;
+  font-size: 17px;
+}
+.each-user-container .right-part p span,
+.each-user-container .left-part p span {
+  color: blue;
+}
+
+.each-user-container .right-part p span {
+  margin-left: 10px;
+}
+
+.each-user-container .right-part h1 {
+  font-family: "Convergence", sans-serif;
+  padding-left: 20px;
+  color: white;
+  background-color: blueviolet;
+}
+
+.right-part form {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.right-part form input {
+  font-family: "Convergence", sans-serif;
+  padding: 5px 8px;
+  font-size: 13px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(4, 189, 149);
+  color: white;
+  box-shadow: 0 2px 3px gray;
+}
+
+@media only screen and (max-width: 599px) {
+  .items-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .each-user-container .right-part p {
+    margin-left: 8px;
+    font-size: 13px;
+  }
+
+  .each-user-container .left-part p {
+    font-size: 13px;
+  }
+
+  .each-user-container .right-part h1 {
+    font-size: 18px;
+  }
+
+  .right-part form input {
+    margin: 5px 5px;
+  }
+}

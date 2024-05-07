@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+
+    <link rel="stylesheet" href="/stylesheets/address.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/place-order/{{bookId}}/{{qty}}" method="post">
+            <h1>Address</h1>
+            <div class="name"><input type="text" name="fullname" placeholder="Full Name*"></div>
+            <div class="number">
+                <input type="number" name="mobile" placeholder="Mobile number*">
+                <input type="number" name="mobileAlt" placeholder="Alternate number">
+            </div>
+            <div class="address">
+                <div class="row">
+                    <input type="text" name="houseOrBuildingName" placeholder="House No./Building Name*">
+                    <input type="text" name="RoadName" placeholder="Road name, Area, Calony*">
+                </div>
+                <div class="row">
+                    <input type="text" name="landmark" placeholder="Landmark*">
+                    <input type="number" name="pincode" placeholder="Pincode*">
+                </div>
+                <div class="row">
+                    <input type="text" name="district" placeholder="District*">
+                    <input type="text" name="state" placeholder="State*">
+                </div>
+                <div class="row">
+                    <p>Only cash on delivery is available now</p>
+                    <input type="submit" value="Place Order">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -14,6 +14,7 @@
 <body>
  {{>top}}
 
+    <div class="items-container">
     <div class="first-row">
       <div class="product-img-container">
         <img class="product-img" src="/books/{{book.image}}" alt="">
@@ -39,17 +40,17 @@
 
           <div class="quality">
             <div>
-              <i class="fa-solid fa-heart"></i>
+              <img src="/img-controller/icons/lock.png">
               <p>quality Checked</p>
             </div>
 
             <div>
-              <i class="fab fa-linkedin-in"></i>
+              <img src="/img-controller/icons/delivery.png">
               <p>Easy Return</p>
             </div>
 
-            <div class="quality-check">
-              <i class="fab fa-linkedin-in"></i>
+            <div>
+              <img src="/img-controller/icons/cashondelivery.png">
               <p>COD Available</p>
             </div>
           </div> <!-- quality -->
@@ -62,10 +63,13 @@
           <div class="cart-buy-container">  
             {{#if user}}
               <input id="cart" onclick="addToCart('{{book._id}}');" type="submit" value="add to cart">
-              <input id="buy" type="button" value="Buy Now">
+              <input id="buy" onclick="buyPage('{{book._id}}');" type="button" value="Buy Now">
             {{else}}
-              <input id="cart" type="button" value="Add To Cart">
-              <input id="buy" type="button" value="Buy Now">
+              <input id="cart" onclick="loginRedirect()" type="button" value="Add To Cart">
+              <input id="buy" onclick="loginRedirect()" type="button" value="Buy Now">
+            {{/if}}
+            {{#if user.admin}}
+              <input id="delete" onclick="deleteBook('{{book._id}}');" type="button" value="Delete">
             {{/if}}
           </div> <!-- cart-buy-container -->
       </div> <!-- product-details-container -->
@@ -95,6 +99,54 @@
      </div> <!-- middleware -->
     </div> <!-- second row -->
 
+    <table class="specification-table">
+        <tr id="first-row">
+            <td colspan="4"><h2 id="specification-heading">Book Specification</h2></td>
+        </tr>
+
+        <tr id="second-row">
+            <td>
+                <div class="specification-content">
+                    <ul>
+                        {{#if book.isbn}}<li><b>ISBN-13</b></li>{{/if}}
+                        {{#if book.publisher}}<li><b>Publisher</b></li>{{/if}}
+                        {{#if book.binding}}<li><b>Binding</b></li>{{/if}}
+                        {{#if book.language}}<li><b>Language</b></li>{{/if}}
+                    </ul>
+                </div>
+
+            <td>
+                <div class="specification-result">
+                    {{#if book.isbn}}<p>{{book.isbn}}</p>{{/if}}
+                    {{#if book.publisher}}<p>{{book.publisher}}</p>{{/if}}
+                    {{#if book.binding}}<p>{{book.binding}}</p>{{/if}}
+                    {{#if book.language}}<p>{{book.language}}</p>{{/if}}
+                </div>  
+            </td>
+
+            <td>
+                <div class="specification-content">
+                    <ul>
+                        {{#if book.pages}} <li><b>No. of Pages</b></li>{{/if}}
+                        {{#if book.publishedDate}} <li><b>Publisher Date</b></li>{{/if}}
+                        {{#if book.width}} <li><b>Width</b></li>{{/if}}
+                        {{#if book.height}} <li><b>Height</b></li>{{/if}}
+                    </ul>
+                </div>
+            </td>
+
+            <td>
+                <div class="specification-result">
+                    {{#if book.pages}} <p>{{book.pages}}</p> {{/if}}
+                    {{#if book.publishedDate}} <p>{{book.publishedDate}}</p> {{/if}}
+                    {{#if book.width}} <p>{{book.width}}mm</p> {{/if}}
+                    {{#if book.height}} <p>{{book.height}}mm</p> {{/if}}
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    </div>
     {{>footer}}
     {{>navbarScrollEffect}}   
     <script src="/scripts/index.js"></script>
@@ -111,19 +163,44 @@
       }
      }
         function addToCart(bookId) {
-          fetch(`/add-to-cart/${bookId}`,
+          fetch(`/add-to-cart/${bookId}/${qtyVal.value}`,
            {
                method: 'post',
                headers: { 'Content-Type': `application/json` }
            })
            .then((respone)=> {
-           if(!respone.ok) {
-               console.log('an error is occured');
-           }})
+            if(!respone.ok) { console.log('an error is occured'); }
+            window.location.href=`/books/${bookId}`;
+           })
            .catch((error)=> {
                alert('error to add item to the cart');
                console.log('script fetch ',error);
            });
+        }
+
+        function buyPage(bookId) {
+          window.location.href=`/place-order/${bookId}/${qtyVal.value}`;
+        }
+        function loginRedirect() {
+          window.location.href='/sign-in-up';
+        }
+
+        function deleteBook(bookId) {
+          fetch(`/delete/${bookId}`,
+            {
+              method: 'post',
+              headers: { 'Content-Type': `application/json` }
+            })
+            .then((respone)=> {
+              if(!respone.ok) { console.log('an error is occured'); }
+            }).then(()=> {
+              window.location.href='/';
+              alert('Successfully deleted');
+            })
+            .catch((error)=> {
+              alert('error in deleting book');
+              console.log('script fetch ',error);
+            })
         }
 
         function addToLike(bookId) {

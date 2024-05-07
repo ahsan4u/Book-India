@@ -111,7 +111,24 @@
   width: 100%;
 }
 
-#cart, #buy {
+.quality {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.quality div img {
+  width: 20%;
+  display: block;
+  margin: 0 auto;
+}
+.quality div p {
+  margin-top: 15px;
+  margin-left: 55px;
+}
+
+#cart, #buy, #delete {
   width: 100px; height: 40px;
   border-style: none;
   border-radius: 15px;
@@ -133,6 +150,12 @@
   background-color: blue;
 }
 
+#delete {
+  border: none;
+  color: white;
+  background-color: red;
+}
+
 .description-container {
   margin: 15px 0;
   padding: 10px 6px;
@@ -146,12 +169,48 @@
   font-size: 20px; line-height: 1.5;
 }
 
+.specification-table {
+  width: 80.3%;
+  border: 1px solid rgba(0, 0, 0, 0.122);
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+#specification-heading {
+  background-color: rgb(103, 31, 127);
+  color: white;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.367);
+  width: 97%;
+  padding: 5px 15px;
+  font-size: 20px;
+}
+
+.specification-table td {
+  border: none;
+}
+
+.specification-table ul {
+  margin: 30px 40px;
+}
+
+.specification-table ul li {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.specification-table tr td div p:not(:first-child) {
+  margin-top: 17px;
+}
+
+
+
 @media only screen and (max-width: 599px) {
   .first-row {
     display: block; width: 100vw;
     margin-bottom: 30px;
   }
-
+  
   #new-price {
     font-size: 28px;
   }
@@ -174,24 +233,28 @@
   
   .name-heading {font-size: 19px;}
   
-  #cart, #buy {
-   font-size: 17px;
-   width: 35%; height: 50px;
+  #cart, #buy, #delete {
+    font-size: 17px;
+    width: 30%; height: 50px;
   }
 
   .cart-buy-container {
    gap: 0;
    justify-content: space-between;
   }
-
+  
   .price-qty {
     display: flex; justify-content: space-between;
     width: 95%;
   }
   
   .description-heading {font-size: 17px;}
-
+  
   .description {
     font-size: 17px; line-height: 1.3;
+  }
+
+  .specification-table {
+    display: none;
   }
 }

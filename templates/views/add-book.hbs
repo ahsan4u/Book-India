@@ -12,47 +12,39 @@
         
         <form class="add" action="/add-book" method="post" enctype="multipart/form-data">
             <h1 id="title">Add A New Book</h1>
+            <div class="all-inputs">
+                <input type="text" class="post-input" id="add-input" name="name" placeholder="Book name">
+                <input type="text" id="price" class="post-input" name="price" placeholder="Price">
+                <select class="post-input" name="categorie" id="categories">
+                    <option value="Other" disabled selected>Categories</option>
+                    <option value="topDeal">Top Deal Book</option>
+                    <option value="bestSeller">Best Seller Book</option>
+                    <option value="newArrival">New Arrival Book</option>
+                    <option value="awardWinner">Award Winner Book</option>
+                    <option value="nonFiction">Non Fiction Book</option>
+                    <option value="Other">Other</option>
+                </select>
 
-                <div class="row first">
-                    <input type="text" class="post-input" id="add-input" name="name" placeholder="Book name">
-                    <input type="text" id="price" class="post-input" name="price" placeholder="Price">
-                    <select class="post-input" name="categorie" id="categories">
-                        <option value="Other" disabled selected>Categories</option>
-                        <option value="topDeal">Top Deal Book</option>
-                        <option value="bestSeller">Best Seller Book</option>
-                        <option value="newArrival">New Arrival Book</option>
-                        <option value="awardWinner">Award Winner Book</option>
-                        <option value="nonFiction">Non Fiction Book</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
+                <input class="post-input" type="text" name="auther" id="Auther" placeholder="Auther Name">
+                <input class="post-input" type="text" name="publisher" id="publisher" placeholder="publisher Name">
+                <input class="post-input" type="text" name="publishedDate" id="publishedDate" placeholder="published Date">
 
-                <div class="row second">
-                    <input class="post-input" type="text" name="auther" id="Auther" placeholder="Auther Name">
-                    <input class="post-input" type="text" name="publisher" id="publisher" placeholder="publisher Name">
-                    <input class="post-input" type="text" name="publishedDate" id="publishedDate" placeholder="published Date">
-                </div>
-
-                <div class="row third">
                 <input class="post-input" type="text" name="isbn" id="isbn" placeholder="ISBN-13 Number">
                 <input class="post-input" type="text" name="binding" id="binding" placeholder="Binding Type">
                 <input class="post-input" type="text" name="language" id="language" placeholder="Language">
-                </div>
 
-                <div class="row forth">
-                    <input class="post-input" type="text" name="pages" id="pages" placeholder="Number of Pages">
-                    <input class="post-input" type="text" name="width" id="width" placeholder="Book width">
-                    <input class="post-input" type="text" name="height" id="height" placeholder="Book height">
-                </div>
-
-                <div class="row fifth">
-                    <textarea name="description" class="post-input" id="description" placeholder="Description"></textarea><br>
-                    <fieldset id="file-field">
-                        <legend>Book's Cover</legend>
-                        <input class="post-input" type="file" id="file" name="image">
-                    </fieldset>
-                    <input class="post-input" id="submit" type="submit" id="add-input" value="Submit">
-                </div>
+                <input class="post-input" type="text" name="pages" id="pages" placeholder="Number of Pages">
+                <input class="post-input" type="text" name="width" id="width" placeholder="Book width">
+                <input class="post-input" type="text" name="height" id="height" placeholder="Book height">
+                
+                <input class="post-input" type="text" name="qty" id="qty" placeholder="Available quantity">
+                <fieldset id="file-field">
+                    <legend>Book's Cover</legend>
+                    <input class="post-input" type="file" id="file" name="image">
+                </fieldset>
+                <textarea name="description" class="post-input" id="description" placeholder="Description"></textarea>
+            </div>
+            <input class="post-input" id="submit" type="submit" id="add-input" value="Submit">
         </form>
 
     {{>navbarScrollEffect}}

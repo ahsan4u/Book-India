@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head}}
+
+    <link rel="stylesheet" href="/stylesheets/my-order.css">
+</head>
+<body>
+    {{>top}}
+    <div class="items-container">
+    {{#if books}}
+    {{#each books}}
+    <div class="order-container">
+        <div class="img-container">
+            <img src="/books/{{image}}">
+        </div>
+
+        <div class="order-details-container">
+            <p>Name: <span>{{name}}</span></p>
+            <p>Quantity: <span>{{qty}}</span></p>
+            <p>Amount: <span>{{price}}₹</span></p>
+            {{#if status}}
+            <p style="color: green;">Your item is delivered</p>
+            {{else}}
+            <p style="color: blue;">Your item will be delivered soon</p>
+            {{/if}}
+        </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <h1>No any Order listed</h1>
+    {{/if}}
+    </div>
+</body>
+</html>

@@ -11,7 +11,6 @@
   </head>
     
   <body>
-      {{>top}}
     <div class="container">
       <span class="big-circle"></span>
       <img src="img-controller/icons/shape.png" class="square" alt="" />
@@ -27,31 +26,28 @@
           <div class="info">
             <div class="information">
               <img src="img-controller/icons/location.png" class="icon" alt="" />
-              <p>92 N block, Azamgarh</p>
+              <p>Anwak, Azamgarh</p>
             </div>
             <div class="information">
               <img src="img-controller/icons/email.png" class="icon" alt="" />
-              <p>itsxyz.com</p>
+              <p>itsahsan13@gmail.com</p>
             </div>
             <div class="information">
               <img src="img-controller/icons/phone.png" class="icon" alt="" />
-              <p>123-456-789</p>
+              <p>+919565717167</p>
             </div>
           </div>
 
           <div class="social-media">
             <p>Connect with us :</p>
             <div class="social-icons">
-              <a href="#">
+              <a href="https://www.facebook.com/its.ahsan.4u">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#">
+              <a href="https://www.instagram.com/ahsan._4u/">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/mohd-ahsan-335506259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
@@ -62,12 +58,12 @@
           <span class="circle one"></span>
           <span class="circle two"></span>
 
-          <form action="/" class= "main-form-tag">
+          <form action="/contact-us" method="post" class= "main-form-tag">
             <h3 class="title">Contact us</h3>
             <div class="input-container">
-              <input type="text" name="name" class="input" />
-              <label for="">Username</label>
-              <span>Username</span>
+              <input type="text" name="fullname" class="input" />
+              <label for="">Fullname</label>
+              <span>Fullname</span>
             </div>
             <div class="input-container">
               <input type="email" name="email" class="input" />
@@ -75,7 +71,7 @@
               <span>Email</span>
             </div>
             <div class="input-container">
-              <input type="tel" name="phone" class="input" />
+              <input type="number" name="phone" class="input" />
               <label for="">Phone</label>
               <span>Phone</span>
             </div>
@@ -90,7 +86,6 @@
       </div>
     </div>
 
-     {{>navbarScrollEffect}}
     <script src="/scripts/contact.js"></script>
   </body>
 </html>

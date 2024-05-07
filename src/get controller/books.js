@@ -12,7 +12,7 @@ const home = async (req, res)=> {
         console.log(`At home page ${error}`);
     }
 };
-
+ 
 const allBooks = async (req, res)=> {
     try {
         const books = await Books.find({});
@@ -37,7 +37,9 @@ const findBook = async (req, res)=> {
 
 const addBook = async (req, res)=> {
     try {
-        if(!req.session.user.admin) return res.send('you are unauthorized');
+        if(!req.session || !req.session.user) { res.render('sign-in-up'); return; }
+        if(!req.session.user.admin) { res.send('you are not authorised'); return; }
+        
         res.render('add-book');
     } catch (error) {
         res.send(error);
@@ -80,5 +82,5 @@ module.exports = {
     textBooks,
     feathured,
     about,
-    contact
+    contact,
 };

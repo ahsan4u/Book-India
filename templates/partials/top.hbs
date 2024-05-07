@@ -11,16 +11,16 @@
             {{#if cartCounts}}<sup id="kart-count">{{cartCounts}}</sup>{{/if}}
         </div>
 
-        <div class="like-container">
+        <!-- <div class="like-container">
             {{#if user._id}}<a href="/likes"><img src="/img-controller/icons/heart.png" alt="heart" style="width: 30px;"></a>
             {{else}}<a href="/sign-in-up"><img src="/img-controller/icons/heart.png" alt="heart" style="width: 30px;"></a>{{/if}}
             {{#if likeCounts}}<sup>{{likeCounts}}</sup>{{/if}}
-        </div>
+        </div> -->
 
         {{#if user}}
         <a href="/my-account">
         <div class="user-tag">
-            <div id="home-profile-name">{{user.firstname}} {{user.lastname}}</div>
+            <div id="home-profile-name">{{user.fullname}}</div>
             <img class="user-img" src="/Users/{{user.image}}">
         </div></a>
         {{else}}
@@ -51,6 +51,5 @@
         {{!-- <li><a href="/audiobooks" class="nav-page">Audio Books</a></li> --}}
         <li><a href="/contact" class="nav-page">Contact us</a></li>
         <li><a href="/about" class="nav-page">About</a></li>
-        {{#if user.admin}}<li><a href="/add-book" class="nav-page">Add Books</a></li>{{/if}}
     </ul>
 </div>

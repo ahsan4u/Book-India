@@ -171,8 +171,8 @@ a[href='/add-book']:hover {
   border-radius: 20px;
 }
 
-.footer-img {
-  width: 100vw; height: 200px;
+.the-footer {
+  width: 100vw; min-height: 200px;
   background: linear-gradient(to left, rgb(104, 34, 127), rgb(103, 31, 127));
   color: white;
 }
@@ -180,6 +180,18 @@ a[href='/add-book']:hover {
 .website-logo {
   margin-top: 15px;
   display: flex; justify-content: center;
+}
+
+.footer-container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-container div p a {
+  display: block;
+  color: white;
+  margin: 10px 0;
 }
 
 @media only screen and (max-width: 599px) {
@@ -197,3 +209,4 @@ a[href='/add-book']:hover {
   #search-icon { width: 7px; margin-top: 2px; }
   .items-container { margin-top: 10px; }
   .navbar { padding-top: 3px; padding-bottom: 2px; }
+}
