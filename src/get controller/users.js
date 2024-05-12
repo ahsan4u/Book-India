@@ -11,7 +11,6 @@ const myAccount = async (req, res)=> {
     res.render('my-account');
 }
 
-// User Logout
 const logout = (req, res)=> {
     req.session.user = null;
     res.redirect('/');
@@ -23,6 +22,7 @@ const myCart = async (req, res)=> {
 
     const userId = req.session.user._id;
     const cart = await Cart.findOne({ userId }).populate('books.book');
+    if(!cart){ res.render('cart'); return; }
     const books = cart.books.map((item)=> {
         const book = item.book;
         book.buyQty = item.qty;
@@ -34,7 +34,6 @@ const myCart = async (req, res)=> {
     res.render('cart', {books, itemCount, totalPrice});
 };
 
-// Order
 const myOrder = async (req, res)=> {
     try {
         if(!req.session || !req.session.user) { res.render('sign-in-up'); return; }
@@ -55,7 +54,6 @@ const myOrder = async (req, res)=> {
     
 }
 
-// Likes
 const MyLikes = async (req, res)=> {
     const userId = req.session.user._id;
     const likes = await Likes.findOne({ userId }).populate('books');
@@ -64,7 +62,6 @@ const MyLikes = async (req, res)=> {
     res.render('likes', {books});
 };
 
-// Address
 const MyAddress = (req, res)=> {
     if(!req.session || !req.session.user) { response.redirect('/sign-in-up'); }
     const bookId = req.params.bookId;
@@ -72,7 +69,6 @@ const MyAddress = (req, res)=> {
     res.render('address', {bookId, qty});
 }
 
-// Admin's order page
 const allOrder = async (req, res)=> {
     if(!req.session || !req.session.user) { res.render('sign-in-up'); return; }
     if(!req.session.user.admin) { res.send('you are not authorised'); return; }
@@ -88,4 +84,4 @@ const allOrder = async (req, res)=> {
     res.render('all-orders', {allOrders});
 }
 
-module.exports = { signInUp, logout, myAccount, myCart, myOrder, allOrder, MyLikes, MyAddress }
+module.exports = {signInUp,logout,myAccount,myCart,myOrder,allOrder,MyLikes,MyAddress}

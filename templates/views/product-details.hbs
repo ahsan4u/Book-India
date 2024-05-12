@@ -14,7 +14,7 @@
 <body>
  {{>top}}
 
-    <div class="items-container">
+  <div class="items-container">
     <div class="first-row">
       <div class="product-img-container">
         <img class="product-img" src="/books/{{book.image}}" alt="">
@@ -41,7 +41,7 @@
           <div class="quality">
             <div>
               <img src="/img-controller/icons/lock.png">
-              <p>quality Checked</p>
+              <p>Quality Checked</p>
             </div>
 
             <div>
@@ -75,6 +75,45 @@
       </div> <!-- product-details-container -->
     </div> <!-- first row -->
    
+    <div class="specifications">
+      <h2 class="specification-heading">Book Specification</h2>
+
+      <div class="specification-content">
+        <div class="contents">
+          <div class="attribute">
+            <p><b>ISBN-13</b></p>
+            <p><b>Publisher</b></p>
+            <p><b>Binding</b></p>
+            <p><b>Language</b></p>
+          </div>
+
+          <div class="value">
+            <p>{{book.isbn}}</p>
+            <p>{{book.publisher}}</p>
+            <p>{{book.binding}}</p>
+            <p>{{book.language}}</p>
+          </div>
+        </div>
+
+        <div class="contents">
+          <div class="attribue">
+            <p><b>No. of Pages</b></p>
+            <p><b>Publisher Date</b></p>
+            <p><b>Width</b></p>
+            <p><b>Height</b></p>
+          </div>
+
+            <div class="value">
+              <p>{{book.pages}}</p>
+              <p>{{book.publishedDate}}</p>
+              <p>{{book.width}}mm</p>
+              <p>{{book.height}}mm</p>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
     <div class= "second-row">
      <div class="middleware">
         {{!-- Books with the same Auther --}}
@@ -88,7 +127,6 @@
                 <div class="item">
                     <a id="bookLink" href="/books/{{_id}}">
                         <img id="book" src="/books/{{image}}" alt="{{image}}"><br>
-                        {{!-- <div class="deal-msg"><small>Up to 59% off</small></div><br> --}}
                         <span id="auther">{{auther}} <span style="color:lightgray"> auther</span></span><br>
                         <span id="price">{{price}}₹</span>
                         <span id="book-name">{{name}}</span>
@@ -98,55 +136,7 @@
         </div> <!-- scroll -->
      </div> <!-- middleware -->
     </div> <!-- second row -->
-
-    <table class="specification-table">
-        <tr id="first-row">
-            <td colspan="4"><h2 id="specification-heading">Book Specification</h2></td>
-        </tr>
-
-        <tr id="second-row">
-            <td>
-                <div class="specification-content">
-                    <ul>
-                        {{#if book.isbn}}<li><b>ISBN-13</b></li>{{/if}}
-                        {{#if book.publisher}}<li><b>Publisher</b></li>{{/if}}
-                        {{#if book.binding}}<li><b>Binding</b></li>{{/if}}
-                        {{#if book.language}}<li><b>Language</b></li>{{/if}}
-                    </ul>
-                </div>
-
-            <td>
-                <div class="specification-result">
-                    {{#if book.isbn}}<p>{{book.isbn}}</p>{{/if}}
-                    {{#if book.publisher}}<p>{{book.publisher}}</p>{{/if}}
-                    {{#if book.binding}}<p>{{book.binding}}</p>{{/if}}
-                    {{#if book.language}}<p>{{book.language}}</p>{{/if}}
-                </div>  
-            </td>
-
-            <td>
-                <div class="specification-content">
-                    <ul>
-                        {{#if book.pages}} <li><b>No. of Pages</b></li>{{/if}}
-                        {{#if book.publishedDate}} <li><b>Publisher Date</b></li>{{/if}}
-                        {{#if book.width}} <li><b>Width</b></li>{{/if}}
-                        {{#if book.height}} <li><b>Height</b></li>{{/if}}
-                    </ul>
-                </div>
-            </td>
-
-            <td>
-                <div class="specification-result">
-                    {{#if book.pages}} <p>{{book.pages}}</p> {{/if}}
-                    {{#if book.publishedDate}} <p>{{book.publishedDate}}</p> {{/if}}
-                    {{#if book.width}} <p>{{book.width}}mm</p> {{/if}}
-                    {{#if book.height}} <p>{{book.height}}mm</p> {{/if}}
-                </div>
-            </td>
-        </tr>
-    </table>
-
-    </div>
+  </div>
     {{>footer}}
     {{>navbarScrollEffect}}   
     <script src="/scripts/index.js"></script>

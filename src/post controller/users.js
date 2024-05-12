@@ -65,7 +65,8 @@ const minusQty = async (req, res)=> {
     try {
         const userId = req.session.user._id;
         const bookId = req.params.bookId;
-        const theCart = await Cart.updateOne({userId, "books.book": bookId}, {$inc: {"books.$.qty": -1}});
+        
+        await Cart.updateOne({userId, "books.book": bookId}, {$inc: {"books.$.qty": -1}});
         res.redirect('/my-cart');   
     } catch (error) {
         res.send('on decreasing qty ', error);

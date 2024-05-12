@@ -21,9 +21,9 @@
             </div>
 
             <div class="qty-container">
-              <span class ="minus" onclick="minus('{{_id}}')">-</span>
+              <span class ="minus" onclick="minus('{{_id}}', document.querySelector('.qty').value)">-</span>
               <input type="number" name="qty" value="{{buyQty}}" class="qty" disabled>
-              <span class="plus" onclick="plus('{{_id}}')">+</span>
+              <span class="plus" onclick="plus('{{_id}}', document.querySelector('.qty').value)">+</span>
             </div>
 
             <div class="right">
@@ -65,9 +65,8 @@
         })
       }
 
-      function minus(bookId) {
-        const qty = Number(document.querySelector('.qty').value);
-        if(qty<=1) {return;}
+      function minus(bookId, value) {
+        if(Number(value)<=1) {return;}
         fetch(`/my-cart/minusQty/${bookId}`,
         {
           method: 'post',
@@ -84,9 +83,8 @@
         })
       }
 
-      function plus(bookId) {
-        const qty = Number(document.querySelector('.qty').value);
-        if(qty>=6) {return;}
+      function plus(bookId, value) {
+        if(Number(value)>=6) {return;}
         fetch(`/my-cart/plusQty/${bookId}`,
         {
           method: 'post',
