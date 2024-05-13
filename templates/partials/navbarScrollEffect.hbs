@@ -2,9 +2,10 @@
 // navebar setting on top and changing color when scrollUp {
 window.onscroll = function() {
     const navbar = document.querySelector('.navbar');
+    const headerHeight = document.querySelector('.header').clientHeight;
     const container = document.querySelector('.items-container');
     
-    if(window.scrollY > 53) {
+    if(window.scrollY >= headerHeight) {
         navbar.style.position = 'fixed';
         navbar.style.backgroundColor = 'rgb(103, 31, 127)';
         container.style.marginTop = "55px";
