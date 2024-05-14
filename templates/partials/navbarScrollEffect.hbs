@@ -8,7 +8,7 @@ window.onscroll = function() {
     if(window.scrollY >= headerHeight) {
         navbar.style.position = 'fixed';
         navbar.style.backgroundColor = 'rgb(103, 31, 127)';
-        container.style.marginTop = `${navbar.clientHeight}px`;
+        container.style.marginTop = `${navbar.clientHeight+2}px`;
     } else {
         navbar.style.position = 'static';
         navbar.style.backgroundColor = 'transparent';
