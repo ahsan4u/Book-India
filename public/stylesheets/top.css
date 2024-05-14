@@ -12,6 +12,7 @@ body::-webkit-scrollbar {
   height: 55px;
 }
 
+
 .logoAndName {
   display: inline-block;
   margin-left: 10px;
@@ -104,6 +105,7 @@ body::-webkit-scrollbar {
   width: 100vw;
   padding-top: 5px;
   padding-bottom: 3px;
+  margin-bottom: 10px;
   top: 0;
   z-index: 10;
   transition: background-color 0.3s ease-out;
@@ -172,7 +174,7 @@ a[href='/add-book']:hover {
 }
 
 .the-footer {
-  width: 100vw; min-height: 200px; padding-top: 5px;
+  min-height: 200px; padding-top: 5px;
   background: linear-gradient(to left, rgb(104, 34, 127), rgb(103, 31, 127));
   color: white;
 }
@@ -183,7 +185,6 @@ a[href='/add-book']:hover {
 }
 
 .footer-container {
-  width: 100vw;
   display: flex;
   justify-content: space-around;
 }
@@ -194,6 +195,8 @@ a[href='/add-book']:hover {
   margin: 10px 0;
   text-align: center;
 }
+
+.footer-user p a { padding: 3px 0; }
 
 @media only screen and (max-width: 599px) {
   .logo-img { width: 30px }
@@ -208,7 +211,6 @@ a[href='/add-book']:hover {
   #search { height: 90%; font-size: 9px; margin-left: 5px; position: relative; top: -4px; }
   #search-btn { width: 28px;}
   #search-icon { width: 7px; margin-top: 2px; }
-  .items-container { margin-top: 10px; }
-  .navbar { padding-top: 3px; padding-bottom: 2px; }
+  .navbar { padding-top: 3px; padding-bottom: 2px; margin-bottom: 5px; }
   .footer-container div p { font-size: 12px; }
 }

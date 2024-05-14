@@ -8,11 +8,11 @@ window.onscroll = function() {
     if(window.scrollY >= headerHeight) {
         navbar.style.position = 'fixed';
         navbar.style.backgroundColor = 'rgb(103, 31, 127)';
-        container.style.marginTop = "55px";
+        container.style.marginTop = `${navbar.clientHeight}px`;
     } else {
         navbar.style.position = 'static';
         navbar.style.backgroundColor = 'transparent';
-        container.style.marginTop = "10px";
+        container.style.marginTop = "0";
     }
 }
 // }

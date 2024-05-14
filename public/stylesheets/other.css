@@ -6,10 +6,6 @@ body::-webkit-scrollbar {
   width: 0;
 }
 
-.items-container {
-  margin-top: 10px;
-}
-
 .advertisment {
   margin: 0 auto;
   border-radius: 10px;
