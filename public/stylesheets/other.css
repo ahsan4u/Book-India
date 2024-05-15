@@ -105,7 +105,6 @@ a {
 }
 
 @media only screen and (max-width: 599px) {
-  /* Android-specific styles here */
   
   .advertisment { height: 200px; }
 
@@ -116,7 +115,6 @@ a {
     width: 50px;
     height: 50px;
   }
-  .items-container { margin: 10px auto}
   #name-tag { font-size: 9px; margin-top: 4px; }
   .middleware { margin: 10px 0 0 0; }
   .scroll { width: 91vw; margin-bottom: 33px; margin-top: 0; gap: 10px;}
