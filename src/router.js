@@ -26,7 +26,7 @@ router.route('/add-book').get(bookGet.addBook).post(bookPost.bookImage, bookPost
 
 router.route('/sign-in-up').get(userGet.signInUp)
 router.route('/sign-up').post(userPost.register);
-// router.route('/sign-up').post(userPost.UserImg.single('image'), userPost.register);
+router.route('/post-user-photo').post(userPost.UserImg.single('image'), userPost.postUserPhoto);
 router.route('/sign-in').post(userPost.login);
 router.route('/logout').get(userGet.logout);
 router.route('/my-account').get(userGet.myAccount);

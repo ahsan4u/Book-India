@@ -6,7 +6,7 @@ const fs = require('fs');
 // Books Upload
     const book = async (req, res)=> {
     try {
-        await Books.create({
+        const book = {
             name: req.body.name,
             price: req.body.price,
             categorie: req.body.categorie,
@@ -22,13 +22,14 @@ const fs = require('fs');
             pages: req.body.pages,
             width: req.body.width,
             height: req.body.height,
-        });
+        };
+        await Books.create(book);
         console.log(`A new Book created in books Collections`);
         res.redirect('/add-book');
     } catch (error) { res.send(`On Posting Book ${error}`); }
 }
 const bookStorage = multer.diskStorage({
-    destination: path.join(__dirname, '../public/books'),
+    destination: (req, file, cb)=> cb(path.join(__dirname, '../../public/books')),
     filename: (req, file, cb)=> { cb(null, file.originalname) }
 });
 const bookImage = multer({ storage: bookStorage }).single('image');

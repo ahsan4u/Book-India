@@ -6,15 +6,12 @@ const { Users, Cart, Likes, Books, Address } = require('../modules');
 const register = async (req, res) => {
     try {
         if(req.body.password != req.body.cpassword) return res.render('sign-in-up', { msg: 'password not match' });
-        // let image = null;
-        // if(req.file.originalname) image = req.file.originalname;
         const body = req.body;
         await Users.create({
             fullname: body.fullname,
             mobile: body.mobile,
             email: body.email,
             password: body.password,
-            // image: image,
             cart: [],
         });
         res.render('sign-in-up', { msg: `Hi Mr. ${req.body.firstname} ${req.body.lastname} your account is created successfully!`});
@@ -22,10 +19,24 @@ const register = async (req, res) => {
         console.log(`on Sign up page ${error}`);
     }
 };  
-// const UserImg = multer({storage: multer.diskStorage({
-//     destination: path.join(__dirname, '../../public/Users'),
-//     filename: (req, file, cb)=> { cb(null, file.originalname) }
-// }) });
+
+const postUserPhoto = async (req, res)=> {
+    try {
+        userId = req.session.user._id;
+        let image = null;
+        if(req.file.originalname) image = req.file.originalname;
+        await Users.findOneAndUpdate({_id: userId},{image});
+        req.session.user.userImgUploaded = true;
+        req.session.user.image = req.file.originalname;
+        res.redirect('/my-account');
+    } catch (error) {
+        console.log(`on uploading user image ${error}`);
+    }
+}
+const UserImg = multer({storage: multer.diskStorage({
+    destination: (req, file, cb)=>{ cb(null, path.join(__dirname, '../../public/Users')) },
+    filename: (req, file, cb)=> { cb(null, file.originalname) }
+}) });
 
 
 // User Login
@@ -175,4 +186,6 @@ module.exports = {
     addToLikes,
     address,
     updateAdminOrder,
+    postUserPhoto,
+    UserImg
 }

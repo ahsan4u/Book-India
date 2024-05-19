@@ -50,8 +50,10 @@ const eachBook = async (req, res)=> {
     const bookId = req.params.id;
     const book = await Books.findById(bookId);
 
-    if(!book) res.redirect('/');
+    if(!book) return res.redirect('/');
     
+    book.priceBefore = (Number(book.price) + (20/100 * Number(book.price))).toFixed(0);
+
     const sameAuther = await Books.find({ auther: book.auther, _id: { $ne: bookId } }).limit(10);
 
     res.render('product-details', { book, sameAuther });

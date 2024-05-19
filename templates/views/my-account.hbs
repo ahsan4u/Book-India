@@ -13,7 +13,14 @@
     {{#if user}}
     <div class="wrapper">
         <div class="left">
-            <img src="/Users/{{user.image}}">
+            <label for="usersImg">
+                <img src="/Users/{{user.image}}">
+            </label>
+            {{#unless userImgUploaded}}
+            <form action="/post-user-photo" method="post" enctype="multipart/form-data" id="userImgForm">
+                <input type="file" name="image" id="usersImg">
+            </form>
+            {{/unless}}
             <h2>{{user.fullname}}</h2>
             {{#if user.admin}} <p style="color: rgb(43, 255, 0)">You're Admin</p>{{/if}}
         </div>
@@ -66,6 +73,13 @@
     {{else}}
     <h1>You are not Logged in</h1>
     {{/if}}
+
+    <script>
+        document.getElementById('usersImg').addEventListener('change', (e)=> {
+            const file = e.target.files[0];            
+            if(file) { document.getElementById('userImgForm').submit(); }
+        })
+    </script>
 </body>
 
 </html>
