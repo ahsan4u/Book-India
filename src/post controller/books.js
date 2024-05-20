@@ -4,9 +4,9 @@ const {Books} = require('../modules');
 const fs = require('fs');
 
 // Books Upload
-    const book = async (req, res)=> {
+const book = async (req, res)=> {
     try {
-        const book = {
+        await Books.create({
             name: req.body.name,
             price: req.body.price,
             categorie: req.body.categorie,
@@ -22,18 +22,18 @@ const fs = require('fs');
             pages: req.body.pages,
             width: req.body.width,
             height: req.body.height,
-        };
-        await Books.create(book);
+        });
         console.log(`A new Book created in books Collections`);
         res.redirect('/add-book');
     } catch (error) { res.send(`On Posting Book ${error}`); }
 }
-const bookStorage = multer.diskStorage({
-    destination: (req, file, cb)=> cb(path.join(__dirname, '../../public/books')),
-    filename: (req, file, cb)=> { cb(null, file.originalname) }
-});
-const bookImage = multer({ storage: bookStorage }).single('image');
 
+const bookImage = multer({ storage: multer.diskStorage({
+    destination: (req, file, cb)=> { cb(null, path.join(__dirname, '../../public/books')) },
+    filename: (req, file, cb)=> { cb(null, file.originalname) }
+})});
+
+// Delete a Book
 const deleteBook = async (req, res) => {
     try {
         if(!req.session.user.admin) {

@@ -21,12 +21,12 @@ router.route('/delete/:bookId').post(bookPost.deleteBook);
 router.route('/contact-us').post(contactMsg);
 router.route('/customers-massages').get(customerMsg);
 
-router.route('/add-book').get(bookGet.addBook).post(bookPost.bookImage, bookPost.book);
-
-
-router.route('/sign-in-up').get(userGet.signInUp)
-router.route('/sign-up').post(userPost.register);
+router.route('/add-book').get(bookGet.addBook).post(bookPost.bookImage.single('image'), bookPost.book);
 router.route('/post-user-photo').post(userPost.UserImg.single('image'), userPost.postUserPhoto);
+
+
+router.route('/sign-in-up').get(userGet.signInUp);
+router.route('/sign-up').post(userPost.register);
 router.route('/sign-in').post(userPost.login);
 router.route('/logout').get(userGet.logout);
 router.route('/my-account').get(userGet.myAccount);
