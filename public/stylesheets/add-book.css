@@ -9,6 +9,10 @@ body {
 
 }
 
+input.error::placeholder, textarea.error::placeholder {
+  color: red;
+}
+
 .navbar{ background-color: white; }
 
 #title {

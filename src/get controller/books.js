@@ -1,4 +1,5 @@
 const { Books, Cart } = require('../modules');
+const jwt = require('jsonwebtoken');
 const home = async (req, res)=> {
     try {
         const topDeal = await Books.find({ categorie: 'topDeal' }).limit(8);
@@ -37,8 +38,8 @@ const findBook = async (req, res)=> {
 
 const addBook = async (req, res)=> {
     try {
-        if(!req.session || !req.session.user) { res.render('sign-in-up'); return; }
-        if(!req.session.user.admin) { res.send('you are not authorised'); return; }
+        if(!req.cookies || !req.cookies.token) { res.render('sign-in-up'); return; }
+        if(!jwt.verify(req.cookies.token, 'ahsan4u').admin) { res.send('you are not authorised'); return; }
         
         res.render('add-book');
     } catch (error) {

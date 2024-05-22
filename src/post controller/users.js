@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken');
 const multer = require('multer');
 const path = require('path');
 const { Users, Cart, Likes, Books, Address } = require('../modules');
@@ -12,9 +13,11 @@ const register = async (req, res) => {
             mobile: body.mobile,
             email: body.email,
             password: body.password,
-            cart: [],
         });
-        res.render('sign-in-up', { msg: `Hi Mr. ${req.body.firstname} ${req.body.lastname} your account is created successfully!`});
+        const user = await Users.findOne({mobile: body.mobile});
+        const token = jwt.sign(user.toObject(), 'ahsan4u');
+        res.cookie('token', token);
+        res.redirect('/');
     } catch (error) {
         console.log(`on Sign up page ${error}`);
     }
@@ -22,12 +25,17 @@ const register = async (req, res) => {
 
 const postUserPhoto = async (req, res)=> {
     try {
-        userId = req.session.user._id;
+        userId = jwt.verify(req.cookies.token, 'ahsan4u')._id;
+
         let image = null;
         if(req.file.originalname) image = req.file.originalname;
         await Users.findOneAndUpdate({_id: userId},{image});
-        req.session.user.userImgUploaded = true;
-        req.session.user.image = req.file.originalname;
+        let token = jwt.verify(req.cookies.token, 'ahsan4u');
+        token.image = req.file.originalname;
+        token.userImgUploaded = true;
+        const newToken = jwt.sign(token, 'ahsan4u');
+        res.cookie('token', newToken);
+
         res.redirect('/my-account');
     } catch (error) {
         console.log(`on uploading user image ${error}`);
@@ -49,21 +57,22 @@ const login = async (req, res)=> {
 
         if(!user) return res.render('sign-in-up', { msg: 'email/mob. no. is incorrect' });
         if(req.body.password == user.password) {
-            req.session.user = user;
+            const token = jwt.sign(user.toObject(), 'ahsan4u');
+            res.cookie('token', token);
             res.redirect('/');
         } else {
             res.render('sign-in-up', { msg: 'Incorrect Password' });
         }
 
     } catch (error) {
-        console.log(`On Registration ${error}`);
+        console.log(`On Login ${error}`);
     }
 }
 
 const AddToCart = async (req, res)=> {
     try {
         const bookId = req.params.bookId;
-        const userId = req.session.user._id;
+        const userId = jwt.verify(req.cookies.token, 'ahsan4u')._id;
         const qty = Number(req.params.qty);
         await Cart.findOneAndUpdate( {userId}, { $addToSet: {books: {book: bookId, qty} } }, { upsert: true, new: true } );
         res.redirect(`/books/${bookId}`);
@@ -74,7 +83,7 @@ const AddToCart = async (req, res)=> {
 
 const minusQty = async (req, res)=> {
     try {
-        const userId = req.session.user._id;
+        const userId = jwt.verify(req.cookies.token, 'ahsan4u')._id;
         const bookId = req.params.bookId;
         
         await Cart.updateOne({userId, "books.book": bookId}, {$inc: {"books.$.qty": -1}});
@@ -86,7 +95,7 @@ const minusQty = async (req, res)=> {
 
 const plusQty = async (req, res)=> {
     try {
-        const userId = req.session.user._id;
+        const userId = jwt.verify(req.cookies.token, 'ahsan4u')._id;
         const bookId = req.params.bookId;
         const theCart = await Cart.updateOne({userId, "books.book": bookId}, {$inc: {"books.$.qty": 1}});
         res.redirect('/my-cart');   
@@ -98,7 +107,7 @@ const plusQty = async (req, res)=> {
 const removeItem = async (req, res)=> {
     try {
         const bookId = req.params.bookId;
-        const userId = req.session.user._id;
+        const userId = jwt.verify(req.cookies.token, 'ahsan4u')._id;
         const cart = await Cart.findOne({userId});
         const index = cart.books.indexOf(bookId);
         cart.books.splice(index, 1);
@@ -111,17 +120,17 @@ const removeItem = async (req, res)=> {
 
 }
 
-const addToLikes = async (req, res)=> {
-    const bookId = req.params.bookId;
-    const userId = req.session.user._id;
-    await Likes.findOneAndUpdate({userId}, { $addToSet: {books: bookId} }, {upsert: true, new: true });
-    res.redirect(`/books/${bookId}`);
-};
+// const addToLikes = async (req, res)=> {
+//     const bookId = req.params.bookId;
+//     const userId = req.session.user._id;
+//     await Likes.findOneAndUpdate({userId}, { $addToSet: {books: bookId} }, {upsert: true, new: true });
+//     res.redirect(`/books/${bookId}`);
+// };
 
 const address = async (req, res)=> {
     try {
         const bookId = req.params.bookId;
-        const userId = req.session.user._id;
+        const userId = jwt.verify(req.cookies.token, 'ahsan4u')._id;
         const userAddress = {
             fullname: req.body.fullname, 
             mobile: req.body.mobile,
@@ -165,10 +174,7 @@ const address = async (req, res)=> {
 const updateAdminOrder = async (req, res)=> {
     try {
         const orderId = req.params.orderId;
-        console.log('backend before finding address');
-        const order = await Address.findByIdAndUpdate(orderId, {status: true}, {new: true});
-        console.log('backend after finding adsress');
-        console.log(order);
+        await Address.findByIdAndUpdate(orderId, {status: true}, {new: true});
         res.redirect('/all-orders');
     } catch (error) {
         res.send('at updating status', error);
@@ -183,7 +189,7 @@ module.exports = {
     minusQty,
     plusQty,
     removeItem,
-    addToLikes,
+    // addToLikes,
     address,
     updateAdminOrder,
     postUserPhoto,

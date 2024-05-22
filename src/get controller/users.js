@@ -1,3 +1,4 @@
+jwt = require('jsonwebtoken');
 const { response } = require('express');
 const {Cart, Likes, Address} = require('../modules');
 
@@ -12,15 +13,15 @@ const myAccount = async (req, res)=> {
 }
 
 const logout = (req, res)=> {
-    req.session.user = null;
+    res.clearCookie('token');
     res.redirect('/');
 }
 
 // Cart
 const myCart = async (req, res)=> {
-    if(!req.session || !req.session.user) { res.render('sign-in-up'); return; }
+    if(!req.cookies || !req.cookies.token) { res.render('sign-in-up'); return; }
 
-    const userId = req.session.user._id;
+    const userId = jwt.verify(req.cookies.token, 'ahsan4u')._id;
     const cart = await Cart.findOne({ userId }).populate('books.book');
     if(!cart){ res.render('cart'); return; }
     const books = cart.books.map((item)=> {
@@ -36,9 +37,9 @@ const myCart = async (req, res)=> {
 
 const myOrder = async (req, res)=> {
     try {
-        if(!req.session || !req.session.user) { res.render('sign-in-up'); return; }
+        if(!req.cookies || !req.cookies.token) { res.render('sign-in-up'); return; }
         
-        const userId = req.session.user._id;
+        const userId = jwt.verify(req.cookies.token, 'ahsan4u')._id;
         const orders = await Address.find({userId}).populate('book');
         const books = orders.map((item)=> {
             const book = item.book;
@@ -54,24 +55,24 @@ const myOrder = async (req, res)=> {
     
 }
 
-const MyLikes = async (req, res)=> {
-    const userId = req.session.user._id;
-    const likes = await Likes.findOne({ userId }).populate('books');
-    if(!likes) return res.render('likes');
-    const books = likes.books;
-    res.render('likes', {books});
-};
+// const MyLikes = async (req, res)=> {
+//     const userId = jwt.verify(req.cookies.token, 'ahsan4u')._id;
+//     const likes = await Likes.findOne({ userId }).populate('books');
+//     if(!likes) return res.render('likes');
+//     const books = likes.books;
+//     res.render('likes', {books});
+// };
 
 const MyAddress = (req, res)=> {
-    if(!req.session || !req.session.user) { response.redirect('/sign-in-up'); }
+    if(!req.cookies || !req.cookies.token) { response.redirect('/sign-in-up'); }
     const bookId = req.params.bookId;
     const qty = req.params.qty;
     res.render('address', {bookId, qty});
 }
 
 const allOrder = async (req, res)=> {
-    if(!req.session || !req.session.user) { res.render('sign-in-up'); return; }
-    if(!req.session.user.admin) { res.send('you are not authorised'); return; }
+    if(!req.cookies || !req.cookies.token) { res.render('sign-in-up'); return; }
+    if(!jwt.verify(req.cookies.token, 'ahsan4u').admin) { res.send('you are not authorised'); return; }
 
     let checkOrders = await Address.find({}).populate('book');
     const allOrders = checkOrders.map((order)=> {
@@ -84,4 +85,4 @@ const allOrder = async (req, res)=> {
     res.render('all-orders', {allOrders});
 }
 
-module.exports = {signInUp,logout,myAccount,myCart,myOrder,allOrder,MyLikes,MyAddress}
+module.exports = {signInUp,logout,myAccount,myCart,myOrder,allOrder,MyAddress}

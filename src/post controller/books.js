@@ -1,3 +1,4 @@
+jwt = require('jsonwebtoken');
 const multer = require('multer');
 const path = require('path');
 const {Books} = require('../modules');
@@ -36,7 +37,7 @@ const bookImage = multer({ storage: multer.diskStorage({
 // Delete a Book
 const deleteBook = async (req, res) => {
     try {
-        if(!req.session.user.admin) {
+        if(!jwt.verify(req.cookies.token, 'ahsan4u').admin) {
             res.send('you are not admin');
             return;
         }

@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken');
 const {Contacts} = require('../modules');
 
 const contactMsg = async (req, res)=> {
@@ -16,8 +17,8 @@ const contactMsg = async (req, res)=> {
 
 const customerMsg = async (req, res)=> {
     try {
-        if(!req.session || !req.session.user) { res.render('sign-in-up'); return; }
-        if(!req.session.user.admin) { res.send('you are not authorised'); return; }
+        if(!req.cookies || !req.cookies.token) { res.render('sign-in-up'); return; }
+        if(!jwt.verify(req.cookies.token, 'ahsan4u').admin) { res.send('you are not authorised'); return; }
 
         let addAllMsg = await Contacts.find({});
         const allMsg = addAllMsg.map((msg)=> {
